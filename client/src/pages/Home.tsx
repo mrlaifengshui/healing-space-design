@@ -17,10 +17,12 @@ export default function Home() {
             <span className="font-semibold text-lg">{APP_TITLE}</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">關於我們</Link>
+            <Link href="/products" className="text-sm text-muted-foreground hover:text-foreground transition-colors">產品</Link>
+            <Link href="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">服務</Link>
+            <Link href="/case-studies" className="text-sm text-muted-foreground hover:text-foreground transition-colors">案例</Link>
+            <Link href="/testimonials" className="text-sm text-muted-foreground hover:text-foreground transition-colors">見證</Link>
             <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">部落格</Link>
-            <Link href="#philosophy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">設計理念</Link>
-            <Link href="#solutions" className="text-sm text-muted-foreground hover:text-foreground transition-colors">解決方案</Link>
+            <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">關於我們</Link>
           </div>
           <Button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700">預約諮詢</Button>
         </div>
