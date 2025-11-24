@@ -1,50 +1,61 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Leaf, Zap, Shield, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Leaf, Zap, Sparkles, ArrowRight, CheckCircle2, Waves } from "lucide-react";
 import { Link } from "wouter";
 import { APP_LOGO, APP_TITLE } from "@/const";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-gradient-healing">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <nav className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm">
         <div className="container flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
               <Leaf className="w-5 h-5 text-white" />
             </div>
-            <span className="font-semibold text-lg">{APP_TITLE}</span>
+            <span className="font-semibold text-lg text-gray-900">{APP_TITLE}</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/products" className="text-sm text-muted-foreground hover:text-foreground transition-colors">產品</Link>
-            <Link href="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">服務</Link>
-            <Link href="/case-studies" className="text-sm text-muted-foreground hover:text-foreground transition-colors">案例</Link>
-            <Link href="/testimonials" className="text-sm text-muted-foreground hover:text-foreground transition-colors">見證</Link>
-            <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">部落格</Link>
-            <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">關於我們</Link>
+            <Link href="/products" className="text-sm text-gray-700 hover:text-emerald-600 transition-colors font-medium">產品與服務</Link>
+            <Link href="/case-studies" className="text-sm text-gray-700 hover:text-emerald-600 transition-colors font-medium">案例</Link>
+            <Link href="/testimonials" className="text-sm text-gray-700 hover:text-emerald-600 transition-colors font-medium">見證</Link>
+            <Link href="/blog" className="text-sm text-gray-700 hover:text-emerald-600 transition-colors font-medium">部落格</Link>
+            <Link href="/about" className="text-sm text-gray-700 hover:text-emerald-600 transition-colors font-medium">關於我們</Link>
           </div>
-          <Button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700">預約諮詢</Button>
+          <Button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg">預約諮詢</Button>
         </div>
       </nav>
 
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-background to-teal-50 -z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 via-white to-blue-50/50 -z-10" />
+        
+        {/* 量子波紋背景 */}
+        <div className="absolute top-20 right-10 w-64 h-64 bg-emerald-200/20 rounded-full blur-3xl -z-5 animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-blue-200/20 rounded-full blur-3xl -z-5 animate-pulse" style={{animationDelay: '1s'}}></div>
+
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              科學化靈性空間設計
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 mt-2">打造療癒的能量場</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur rounded-full border border-emerald-200/50">
+              <Waves className="w-4 h-4 text-emerald-600" />
+              <span className="text-sm text-emerald-700 font-medium">科學量子 × 療癒空間</span>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900">
+              打造療癒的
+              <span className="block bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mt-2">能量場</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              結合傳統風水智慧與現代健康標準，透過科學化的能量場分析，為您的空間帶來深度療癒與心靈成長。無論是企業辦公室、療癒中心還是私密家居，我們都能打造出真正實現身心平衡的靜修空間。
+
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+              結合傳統風水智慧與現代科學，透過量子能量調頻，為您的空間帶來深度療癒與心靈成長。無論是企業辦公室、療癒中心還是私密家居，我們都能打造出真正實現身心平衡的靜修空間。
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700">
-                立即預約諮詢 <ArrowRight className="ml-2 w-4 h-4" />
+              <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg">
+                預約免費諮詢 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="border-emerald-300 text-emerald-700 hover:bg-emerald-50">
                 了解更多
               </Button>
             </div>
@@ -52,136 +63,230 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Three Pillars Section */}
-      <section id="philosophy" className="py-20 md:py-32 bg-muted/30">
+      {/* 三大設計支柱 Section */}
+      <section className="py-16 md:py-24 px-4 bg-white/50 backdrop-blur">
         <div className="container">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">設計三大支柱</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">從美學到深度療癒的完整實踐</p>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              療癒空間的三大支柱
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              科學化的設計理念，為您的空間帶來完整的療癒體驗
+            </p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Leaf,
-                title: "親生命設計",
-                description: "將自然元素融入空間，重建人與自然的連結。透過自然光線、天然材質和垂直綠化，降低壓力、提升情緒穩定性。",
-                color: "from-emerald-500 to-teal-600"
-              },
-              {
-                icon: Zap,
-                title: "感官療癒設計",
-                description: "透過五感控制，創造深度靜修環境。優化聽覺、嗅覺、視覺等感官體驗，實現無干擾的高專注狀態。",
-                color: "from-amber-500 to-orange-600"
-              },
-              {
-                icon: Shield,
-                title: "淨修功能性",
-                description: "確保空間具備高效的健康與靜修功能。智能空氣淨化、隱藏式收納、人體工學設計，實現『留白』美學。",
-                color: "from-blue-500 to-cyan-600"
-              }
-            ].map((pillar, idx) => {
-              const Icon = pillar.icon;
-              return (
-                <Card key={idx} className="p-8 border-0 bg-background hover:shadow-lg transition-shadow">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${pillar.color} flex items-center justify-center mb-4`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{pillar.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{pillar.description}</p>
-                </Card>
-              );
-            })}
+            {/* 自然空間設計 */}
+            <Card className="border-2 border-emerald-200/50 bg-gradient-to-br from-emerald-50/50 to-white hover:shadow-xl transition-all duration-300 group">
+              <div className="p-8">
+                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Leaf className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">自然空間設計</h3>
+                <p className="text-gray-700">
+                  運用自然元素、光線和空氣流動，營造如同置身大自然的療癒環境。
+                </p>
+              </div>
+            </Card>
+
+            {/* 靈修功能設計 */}
+            <Card className="border-2 border-blue-200/50 bg-gradient-to-br from-blue-50/50 to-white hover:shadow-xl transition-all duration-300 group">
+              <div className="p-8">
+                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">靈修功能設計</h3>
+                <p className="text-gray-700">
+                  通過能量場分析與優化，提升空間的靈性頻率，支持冥想與靜修。
+                </p>
+              </div>
+            </Card>
+
+            {/* 感官療癒設計 */}
+            <Card className="border-2 border-purple-200/50 bg-gradient-to-br from-purple-50/50 to-white hover:shadow-xl transition-all duration-300 group">
+              <div className="p-8">
+                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Zap className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">感官療癒設計</h3>
+                <p className="text-gray-700">
+                  優化視覺、聽覺、嗅覺、觸覺體驗，為身心帶來全方位的療癒感受。
+                </p>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Solutions Section */}
-      <section id="solutions" className="py-20 md:py-32">
+      {/* 解決方案 Section */}
+      <section className="py-16 md:py-24 px-4 bg-gradient-to-r from-emerald-50/50 to-blue-50/50">
         <div className="container">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">針對性解決方案</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">為不同客戶類型量身定制的專業設計方案</p>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              針對性解決方案
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              從個人家居到企業辦公，我們提供完整的療癒空間設計方案
+            </p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "企業 Wellness Room",
-                subtitle: "降低員工 Burnout，提升生產力",
-                features: ["冥想室設計", "正念空間規劃", "員工減壓方案"],
-                price: "HKD 30 萬+"
-              },
-              {
-                title: "療癒中心升級",
-                subtitle: "深度療癒空間，提升客戶體驗",
-                features: ["能量場優化", "感官設計應用", "專業療癒環境"],
-                price: "HKD 50 萬+"
-              },
-              {
-                title: "居家淨修室",
-                subtitle: "私密靜修空間，提升生活品質",
-                features: ["小坪數設計", "隔音優化", "靈性佈置"],
-                price: "HKD 10 萬+"
-              }
-            ].map((solution, idx) => (
-              <Card key={idx} className="p-8 border-0 bg-gradient-to-br from-background to-muted/50 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold mb-2">{solution.title}</h3>
-                <p className="text-sm text-muted-foreground mb-6">{solution.subtitle}</p>
-                <div className="space-y-3 mb-6">
-                  {solution.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
+            {/* 個人療癒空間 */}
+            <Card className="border border-emerald-200 hover:border-emerald-400 transition-colors group">
+              <div className="p-8">
+                <div className="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center mb-4 group-hover:bg-emerald-200 transition-colors">
+                  <Leaf className="w-6 h-6 text-emerald-600" />
                 </div>
-                <div className="pt-6 border-t border-border">
-                  <p className="text-sm text-muted-foreground mb-4">起價</p>
-                  <p className="text-lg font-semibold text-emerald-600">{solution.price}</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">個人療癒空間</h3>
+                <p className="text-gray-700 mb-4">
+                  為您的臥室、書房或家庭靜修室打造私人療癒聖地。
+                </p>
+                <Link href="/products" className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium">
+                  了解詳情 <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </Card>
+
+            {/* 家居靈修室 */}
+            <Card className="border border-blue-200 hover:border-blue-400 transition-colors group">
+              <div className="p-8">
+                <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
+                  <Sparkles className="w-6 h-6 text-blue-600" />
                 </div>
-              </Card>
-            ))}
+                <h3 className="text-lg font-bold text-gray-900 mb-3">家居靈修室</h3>
+                <p className="text-gray-700 mb-4">
+                  專為冥想、瑜伽和靈性修行設計的獨立靜修空間。
+                </p>
+                <Link href="/services" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
+                  查看方案 <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </Card>
+
+            {/* 企業 Wellness Room */}
+            <Card className="border border-purple-200 hover:border-purple-400 transition-colors group">
+              <div className="p-8">
+                <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
+                  <Zap className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-3">企業 Wellness Room</h3>
+                <p className="text-gray-700 mb-4">
+                  為企業打造員工身心健康的靜修空間，提升工作效率。
+                </p>
+                <Link href="/services" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium">
+                  企業方案 <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* 產品與服務 Section */}
+      <section className="py-16 md:py-24 px-4 bg-white/50 backdrop-blur">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              量子療癒空間淨化儀
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              物質與非物質同步淨化，改善空間能量頻率
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Card className="border border-emerald-200 bg-gradient-to-br from-emerald-50/50 to-white p-8">
+              <div className="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center mb-4">
+                <Leaf className="w-6 h-6 text-emerald-600" />
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2">空氣淨化</h4>
+              <p className="text-gray-700 text-sm">釋放森林級數的負離子，營造清新的呼吸環境</p>
+            </Card>
+
+            <Card className="border border-blue-200 bg-gradient-to-br from-blue-50/50 to-white p-8">
+              <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-blue-600" />
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2">能量調頻</h4>
+              <p className="text-gray-700 text-sm">量子調頻技術驅走負能量，提升正能量</p>
+            </Card>
+
+            <Card className="border border-purple-200 bg-gradient-to-br from-purple-50/50 to-white p-8">
+              <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4">
+                <Sparkles className="w-6 h-6 text-purple-600" />
+              </div>
+              <h4 className="font-bold text-gray-900 mb-2">氣場優化</h4>
+              <p className="text-gray-700 text-sm">分析空間能量，提升氣場運轉效率</p>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg">
+              了解產品詳情 <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 md:py-32 bg-gradient-to-br from-emerald-600 to-teal-700 text-white">
-        <div className="container text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl font-bold">準備好打造您的療癒空間了嗎？</h2>
-          <p className="text-lg text-emerald-100 max-w-2xl mx-auto">立即預約免費的空間能量場初步諮詢，我們將根據您的需求提供專業的設計方案。</p>
-          <Button size="lg" className="bg-white text-emerald-600 hover:bg-emerald-50">
-            立即預約 <ArrowRight className="ml-2 w-4 h-4" />
-          </Button>
+      <section className="py-16 md:py-24 px-4 bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-20 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-20 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              準備改變您的空間能量了嗎？
+            </h2>
+            <p className="text-lg mb-8 opacity-90">
+              立即預約免費的空間能量檢測，了解您的空間如何受益於療癒空間設計。
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 shadow-lg">
+                預約免費諮詢
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                查看案例
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-muted/30 py-12">
+      <footer className="bg-gray-900 text-gray-400 py-12 px-4">
         <div className="container">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h4 className="font-semibold mb-4">關於我們</h4>
-              <p className="text-sm text-muted-foreground">科學化靈性空間設計專家，結合量子風水與國際健康標準。</p>
+              <div className="flex items-center gap-2 mb-4">
+                <Leaf className="w-5 h-5 text-emerald-500" />
+                <span className="font-semibold text-white">{APP_TITLE}</span>
+              </div>
+              <p className="text-sm">打造療癒的能量場</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">快速連結</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="#philosophy">設計理念</Link></li>
-                <li><Link href="#solutions">解決方案</Link></li>
-                <li><Link href="/blog">部落格</Link></li>
+              <h4 className="font-semibold text-white mb-4">產品與服務</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/products" className="hover:text-white transition-colors">量子淨化儀</Link></li>
+                <li><Link href="/services" className="hover:text-white transition-colors">設計服務</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">聯繫方式</h4>
-              <p className="text-sm text-muted-foreground">WhatsApp: +852 XXXX XXXX</p>
-              <p className="text-sm text-muted-foreground">Email: info@healing-space.hk</p>
+              <h4 className="font-semibold text-white mb-4">公司</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link href="/about" className="hover:text-white transition-colors">關於我們</Link></li>
+                <li><Link href="/case-studies" className="hover:text-white transition-colors">成功案例</Link></li>
+              </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">合作夥伴</h4>
-              <p className="text-sm text-muted-foreground">與 mrlaifengshui.com 合作，提供專業的靈性空間設計服務。</p>
+              <h4 className="font-semibold text-white mb-4">聯繫我們</h4>
+              <p className="text-sm">WhatsApp: +852 XXXX XXXX</p>
+              <p className="text-sm">Email: info@healing-space.hk</p>
             </div>
           </div>
-          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+          <div className="border-t border-gray-800 pt-8 text-center text-sm">
             <p>&copy; 2025 療癒空間設計指南。版權所有。</p>
           </div>
         </div>

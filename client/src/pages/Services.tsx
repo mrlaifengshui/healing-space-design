@@ -8,7 +8,6 @@ export default function Services() {
       level: "Level 1",
       title: "空間能量檢測與優化",
       subtitle: "入門級",
-      price: "HKD 5,000 - 10,000",
       duration: "1-2 小時",
       color: "emerald",
       description: "首次接觸、預算有限、想快速改善",
@@ -23,9 +22,8 @@ export default function Services() {
     },
     {
       level: "Level 2",
-      title: "小坪數淨修室設計",
+      title: "個人療癒空間設計",
       subtitle: "中級",
-      price: "HKD 50,000 - 150,000",
       duration: "2-4 週",
       color: "blue",
       description: "有明確需求、預算中等、想完整改造",
@@ -43,7 +41,6 @@ export default function Services() {
       level: "Level 3",
       title: "企業 Wellness Room 設計",
       subtitle: "高級",
-      price: "HKD 200,000 - 500,000",
       duration: "4-8 週",
       color: "purple",
       description: "企業客戶、預算充足、需要完整解決方案",
@@ -62,7 +59,6 @@ export default function Services() {
       level: "Level 4",
       title: "Spa/療癒中心靈性空間設計",
       subtitle: "頂級",
-      price: "HKD 500,000 - 1,000,000+",
       duration: "8-12 週",
       color: "amber",
       description: "高端療癒中心、品牌提升、長期合作",
@@ -84,25 +80,25 @@ export default function Services() {
     const colors: Record<string, { border: string; bg: string; text: string; button: string }> = {
       emerald: {
         border: "border-emerald-300",
-        bg: "bg-emerald-50",
+        bg: "bg-emerald-50/50",
         text: "text-emerald-700",
         button: "bg-emerald-600 hover:bg-emerald-700"
       },
       blue: {
         border: "border-blue-300",
-        bg: "bg-blue-50",
+        bg: "bg-blue-50/50",
         text: "text-blue-700",
         button: "bg-blue-600 hover:bg-blue-700"
       },
       purple: {
         border: "border-purple-300",
-        bg: "bg-purple-50",
+        bg: "bg-purple-50/50",
         text: "text-purple-700",
         button: "bg-purple-600 hover:bg-purple-700"
       },
       amber: {
         border: "border-amber-300",
-        bg: "bg-amber-50",
+        bg: "bg-amber-50/50",
         text: "text-amber-700",
         button: "bg-amber-600 hover:bg-amber-700"
       }
@@ -111,9 +107,9 @@ export default function Services() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-healing">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 via-blue-50 to-white py-20 px-4">
+      <section className="bg-gradient-to-br from-emerald-50/50 via-white to-blue-50/50 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             療癒空間設計服務
@@ -122,20 +118,20 @@ export default function Services() {
             由淺入深的設計方案，滿足不同客戶需求
           </p>
           <p className="text-lg text-gray-600">
-            從個人家庭到高端企業，我們提供完整的靈性空間解決方案
+            從個人家庭到企業辦公，我們提供完整的靈性空間解決方案
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white/50 backdrop-blur">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {services.map((service, index) => {
               const colors = getColorClasses(service.color);
               return (
-                <Card key={index} className={`border-2 ${colors.border} hover:shadow-lg transition-shadow`}>
-                  <CardHeader className={colors.bg}>
+                <Card key={index} className={`border-2 ${colors.border} bg-gradient-to-br ${colors.bg} to-white hover:shadow-lg transition-shadow`}>
+                  <CardHeader className={`bg-gradient-to-r from-${service.color}-100/50 to-${service.color}-50/50`}>
                     <div className="flex justify-between items-start mb-3">
                       <div>
                         <p className={`text-sm font-semibold ${colors.text} mb-1`}>{service.level}</p>
@@ -151,8 +147,8 @@ export default function Services() {
                     </div>
 
                     <div className="mb-6 pb-6 border-b">
-                      <p className={`text-3xl font-bold ${colors.text} mb-2`}>{service.price}</p>
-                      <p className="text-sm text-gray-600">預計週期：{service.duration}</p>
+                      <p className="text-sm text-gray-600">預計週期：</p>
+                      <p className={`text-lg font-bold ${colors.text}`}>{service.duration}</p>
                     </div>
 
                     <div className="mb-8">
@@ -167,7 +163,7 @@ export default function Services() {
                       </ul>
                     </div>
 
-                    <Button className={`w-full ${colors.button}`}>
+                    <Button className={`w-full ${colors.button} text-white`}>
                       {service.cta}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -180,7 +176,7 @@ export default function Services() {
       </section>
 
       {/* Service Process Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-emerald-50 to-blue-50">
+      <section className="py-16 px-4 bg-gradient-to-r from-emerald-50/50 to-blue-50/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
             設計流程
@@ -209,7 +205,7 @@ export default function Services() {
                 description: "協助實施設計方案，定期跟進和優化效果"
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                 <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 font-bold text-white ${
                   index === 0 ? 'bg-emerald-600' :
                   index === 1 ? 'bg-blue-600' :
@@ -227,7 +223,7 @@ export default function Services() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-16 px-4 bg-white/50 backdrop-blur">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
             為什麼選擇我們
@@ -274,8 +270,13 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-emerald-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center text-white">
+      <section className="py-16 px-4 bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-20 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-20 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto text-center text-white relative z-10">
           <h2 className="text-3xl font-bold mb-6">
             準備開始您的療癒空間之旅了嗎？
           </h2>
