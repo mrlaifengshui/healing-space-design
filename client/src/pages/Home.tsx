@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Leaf, Zap, Sparkles, ArrowRight, CheckCircle2, Waves } from "lucide-react";
+import { Leaf, Zap, Sparkles, ArrowRight, CheckCircle2, Waves, Building2 } from "lucide-react";
 import { Link } from "wouter";
 import { APP_LOGO, APP_TITLE } from "@/const";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-healing">
       {/* Navigation */}
@@ -17,7 +17,7 @@ export default function Home() {
             <span className="font-semibold text-lg text-gray-900">{APP_TITLE}</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/products" className="text-sm text-gray-700 hover:text-emerald-600 transition-colors font-medium">產品與服務</Link>
+            <Link href="/services" className="text-sm text-gray-700 hover:text-emerald-600 transition-colors font-medium">設計服務</Link>
             <Link href="/case-studies" className="text-sm text-gray-700 hover:text-emerald-600 transition-colors font-medium">案例</Link>
             <Link href="/testimonials" className="text-sm text-gray-700 hover:text-emerald-600 transition-colors font-medium">見證</Link>
             <Link href="/blog" className="text-sm text-gray-700 hover:text-emerald-600 transition-colors font-medium">部落格</Link>
@@ -27,8 +27,8 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      {/* Hero Section with Slogan */}
+      <section className="relative py-24 md:py-40 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 via-white to-blue-50/50 -z-10" />
         
         {/* 量子波紋背景 */}
@@ -36,19 +36,19 @@ export default function Home() {
         <div className="absolute bottom-20 left-10 w-80 h-80 bg-blue-200/20 rounded-full blur-3xl -z-5 animate-pulse" style={{animationDelay: '1s'}}></div>
 
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur rounded-full border border-emerald-200/50">
-              <Waves className="w-4 h-4 text-emerald-600" />
-              <span className="text-sm text-emerald-700 font-medium">科學量子 × 療癒空間</span>
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            {/* Main Slogan */}
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900">
+                科學化靈性空間設計
+              </h1>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                打造療癒的能量場
+              </h2>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900">
-              打造療癒的
-              <span className="block bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mt-2">能量場</span>
-            </h1>
-
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
-              結合傳統風水智慧與現代科學，透過量子能量調頻，為您的空間帶來深度療癒與心靈成長。無論是企業辦公室、療癒中心還是私密家居，我們都能打造出真正實現身心平衡的靜修空間。
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              結合傳統風水智慧與現代健康標準，透過科學化的能量場分析，為您的空間帶來深度療癒與心靈成長。無論是企業辦公室、療癒中心還是私密家居，我們都能打造出真正實現身心平衡的靜修空間。
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -56,7 +56,7 @@ export default function Home() {
                 預約免費諮詢 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
               <Button size="lg" variant="outline" className="border-emerald-300 text-emerald-700 hover:bg-emerald-50">
-                了解更多
+                了解設計服務
               </Button>
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              療癒空間的三大支柱
+              療癒空間設計的三大支柱
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               科學化的設計理念，為您的空間帶來完整的療癒體驗
@@ -118,12 +118,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 解決方案 Section */}
+      {/* 設計服務方案 Section */}
       <section className="py-16 md:py-24 px-4 bg-gradient-to-r from-emerald-50/50 to-blue-50/50">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              針對性解決方案
+              針對性設計方案
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               從個人家居到企業辦公，我們提供完整的療癒空間設計方案
@@ -141,7 +141,7 @@ export default function Home() {
                 <p className="text-gray-700 mb-4">
                   為您的臥室、書房或家庭靜修室打造私人療癒聖地。
                 </p>
-                <Link href="/products" className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium">
+                <Link href="/services" className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium">
                   了解詳情 <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -167,7 +167,7 @@ export default function Home() {
             <Card className="border border-purple-200 hover:border-purple-400 transition-colors group">
               <div className="p-8">
                 <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
-                  <Zap className="w-6 h-6 text-purple-600" />
+                  <Building2 className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">企業 Wellness Room</h3>
                 <p className="text-gray-700 mb-4">
@@ -179,18 +179,24 @@ export default function Home() {
               </div>
             </Card>
           </div>
+
+          <div className="text-center mt-12">
+            <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg">
+              查看完整設計服務 <ArrowRight className="ml-2 w-4 h-4" />
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* 產品與服務 Section */}
+      {/* 輔助工具 - 量子療癒空間淨化儀 Section */}
       <section className="py-16 md:py-24 px-4 bg-white/50 backdrop-blur">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              量子療癒空間淨化儀
+              設計的完美輔助
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              物質與非物質同步淨化，改善空間能量頻率
+              量子療癒空間淨化儀 — 強化設計效果的科技工具
             </p>
           </div>
 
@@ -221,8 +227,8 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg">
-              了解產品詳情 <ArrowRight className="ml-2 w-4 h-4" />
+            <Button size="lg" variant="outline" className="border-emerald-300 text-emerald-700 hover:bg-emerald-50">
+              了解淨化儀詳情 <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </div>
         </div>
@@ -241,7 +247,7 @@ export default function Home() {
               準備改變您的空間能量了嗎？
             </h2>
             <p className="text-lg mb-8 opacity-90">
-              立即預約免費的空間能量檢測，了解您的空間如何受益於療癒空間設計。
+              立即預約免費的空間設計諮詢，讓我們為您打造真正實現身心平衡的靜修空間。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 shadow-lg">
@@ -267,10 +273,11 @@ export default function Home() {
               <p className="text-sm">打造療癒的能量場</p>
             </div>
             <div>
-              <h4 className="font-semibold text-white mb-4">產品與服務</h4>
+              <h4 className="font-semibold text-white mb-4">設計服務</h4>
               <ul className="space-y-2 text-sm">
-                <li><Link href="/products" className="hover:text-white transition-colors">量子淨化儀</Link></li>
-                <li><Link href="/services" className="hover:text-white transition-colors">設計服務</Link></li>
+                <li><Link href="/services" className="hover:text-white transition-colors">個人療癒空間</Link></li>
+                <li><Link href="/services" className="hover:text-white transition-colors">家居靈修室</Link></li>
+                <li><Link href="/services" className="hover:text-white transition-colors">企業 Wellness</Link></li>
               </ul>
             </div>
             <div>
@@ -278,6 +285,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm">
                 <li><Link href="/about" className="hover:text-white transition-colors">關於我們</Link></li>
                 <li><Link href="/case-studies" className="hover:text-white transition-colors">成功案例</Link></li>
+                <li><Link href="/blog" className="hover:text-white transition-colors">部落格</Link></li>
               </ul>
             </div>
             <div>
