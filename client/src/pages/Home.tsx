@@ -28,7 +28,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-20 md:py-32 overflow-hidden animate-fade-in">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 via-white to-blue-50/50 -z-10" />
         
         {/* 量子波紋背景 */}
@@ -37,25 +37,25 @@ export default function Home() {
 
         <div className="container">
           <div className="max-w-3xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur rounded-full border border-emerald-200/50">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur rounded-full border border-emerald-200/50 animate-slide-in-down">
               <Waves className="w-4 h-4 text-emerald-600" />
               <span className="text-sm text-emerald-700 font-medium">科學量子 × 療癒空間</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900">
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 animate-slide-in-up" style={{animationDelay: '0.2s'}}>
               打造療癒的
               <span className="block bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent mt-2">能量場</span>
             </h1>
 
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed animate-slide-in-up" style={{animationDelay: '0.4s'}}>
               結合傳統風水智慧與現代科學，透過量子能量調頻，為您的空間帶來深度療癒與心靈成長。無論是企業辦公室、療癒中心還是私密家居，我們都能打造出真正實現身心平衡的靜修空間。
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-slide-in-up" style={{animationDelay: '0.6s'}}>
+              <Button size="lg" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg btn-hover-glow animate-pulse-subtle">
                 預約免費諮詢 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
-              <Button size="lg" variant="outline" className="border-emerald-300 text-emerald-700 hover:bg-emerald-50">
+              <Button size="lg" variant="outline" className="border-emerald-300 text-emerald-700 hover:bg-emerald-50 btn-hover">
                 了解更多
               </Button>
             </div>
@@ -77,7 +77,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* 自然空間設計 */}
-            <Card className="border-2 border-emerald-200/50 bg-gradient-to-br from-emerald-50/50 to-white hover:shadow-xl transition-all duration-300 group">
+            <Card className="border-2 border-emerald-200/50 bg-gradient-to-br from-emerald-50/50 to-white card-hover-lift stagger-item">
               <div className="p-8">
                 <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Leaf className="w-7 h-7 text-white" />
@@ -90,7 +90,7 @@ export default function Home() {
             </Card>
 
             {/* 靈修功能設計 */}
-            <Card className="border-2 border-blue-200/50 bg-gradient-to-br from-blue-50/50 to-white hover:shadow-xl transition-all duration-300 group">
+            <Card className="border-2 border-blue-200/50 bg-gradient-to-br from-blue-50/50 to-white card-hover-lift stagger-item">
               <div className="p-8">
                 <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Sparkles className="w-7 h-7 text-white" />
@@ -103,7 +103,7 @@ export default function Home() {
             </Card>
 
             {/* 感官療癒設計 */}
-            <Card className="border-2 border-purple-200/50 bg-gradient-to-br from-purple-50/50 to-white hover:shadow-xl transition-all duration-300 group">
+            <Card className="border-2 border-purple-200/50 bg-gradient-to-br from-purple-50/50 to-white card-hover-lift stagger-item">
               <div className="p-8">
                 <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Zap className="w-7 h-7 text-white" />
@@ -122,17 +122,17 @@ export default function Home() {
       <section className="py-16 md:py-24 px-4 bg-gradient-to-r from-emerald-50/50 to-blue-50/50">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-slide-in-up">
               針對性解決方案
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-slide-in-up" style={{animationDelay: '0.1s'}}>
               從個人家居到企業辦公，我們提供完整的療癒空間設計方案
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* 個人療癒空間 */}
-            <Card className="border border-emerald-200 hover:border-emerald-400 transition-colors group">
+            <Card className="border border-emerald-200 card-hover-lift stagger-item">
               <div className="p-8">
                 <div className="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center mb-4 group-hover:bg-emerald-200 transition-colors">
                   <Leaf className="w-6 h-6 text-emerald-600" />
@@ -141,14 +141,14 @@ export default function Home() {
                 <p className="text-gray-700 mb-4">
                   為您的臥室、書房或家庭靜修室打造私人療癒聖地。
                 </p>
-                <Link href="/products" className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium">
+                <Link href="/products" className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium transition-smooth">
                   了解詳情 <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </Card>
 
             {/* 家居靈修室 */}
-            <Card className="border border-blue-200 hover:border-blue-400 transition-colors group">
+            <Card className="border border-blue-200 card-hover-lift stagger-item">
               <div className="p-8">
                 <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4 group-hover:bg-blue-200 transition-colors">
                   <Sparkles className="w-6 h-6 text-blue-600" />
@@ -157,23 +157,23 @@ export default function Home() {
                 <p className="text-gray-700 mb-4">
                   專為冥想、瑜伽和靈性修行設計的獨立靜修空間。
                 </p>
-                <Link href="/services" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
+                <Link href="/services" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-smooth">
                   查看方案 <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </Card>
 
             {/* 企業 Wellness Room */}
-            <Card className="border border-purple-200 hover:border-purple-400 transition-colors group">
+            <Card className="border border-purple-200 card-hover-lift stagger-item">
               <div className="p-8">
                 <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4 group-hover:bg-purple-200 transition-colors">
                   <Zap className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">企業 Wellness Room</h3>
                 <p className="text-gray-700 mb-4">
-                  為企業打造員工身心健康的靜修空間，提升工作效率。
+                  為企業打造咡工身心健康的靜修空間，提升工作效率。
                 </p>
-                <Link href="/services" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium">
+                <Link href="/services" className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium transition-smooth">
                   企業方案 <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
