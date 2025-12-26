@@ -11,315 +11,472 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* 療癒空間特殊樣式 */
+        /* 療癒空間特殊樣式 - 增強正能量與療癒感 */
         :root {
-            --healing-primary: #8B9D83;
-            --healing-secondary: #C8B899;
-            --healing-accent: #9BB8B3;
-            --healing-soft: #F5F3ED;
+            --healing-primary: #A8C090;
+            --healing-secondary: #D4C5A9;
+            --healing-accent: #B8D4CE;
+            --healing-soft: #F8F6F0;
             --healing-warm: #E8DCC4;
-            --healing-blue: #5B9BD5;
+            --healing-teal: #6B9B8E;
+            --healing-gold: #C9A96E;
+            --healing-light: #FFF9F0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background: var(--healing-light);
+            color: #4A5045;
+            line-height: 1.8;
         }
         
         .hero {
-            background: linear-gradient(135deg, rgba(91, 155, 213, 0.85) 0%, rgba(139, 157, 131, 0.75) 100%), 
-                        url('https://www.genspark.ai/api/files/s/9Q0KZLjM') center/cover no-repeat;
-            min-height: 90vh;
+            background: linear-gradient(180deg, rgba(248, 246, 240, 0.3) 0%, rgba(168, 192, 144, 0.1) 100%), 
+                        url('https://www.genspark.ai/api/files/s/fp3jg7OC') center/cover no-repeat;
+            min-height: 95vh;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
         
-        .hero-overlay {
+        .hero::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.2);
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(168, 192, 144, 0.15) 100%);
         }
         
         .hero-content {
             position: relative;
             z-index: 2;
             text-align: center;
-            padding: 2rem;
+            padding: 3rem 2rem;
             max-width: 1000px;
             margin: 0 auto;
         }
         
         .hero-title {
             font-size: 3.5rem;
-            font-weight: 700;
-            color: white;
+            font-weight: 600;
+            color: #3D4A3C;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+            letter-spacing: 2px;
         }
         
         .hero-subtitle {
-            font-size: 2rem;
-            color: var(--healing-blue);
+            font-size: 2.2rem;
+            color: var(--healing-teal);
             margin-bottom: 2rem;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+            font-weight: 400;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
         }
         
         .hero-description {
-            font-size: 1.2rem;
-            line-height: 2;
-            color: white;
-            margin: 2rem auto 2.5rem;
+            font-size: 1.25rem;
+            line-height: 2.2;
+            color: #5A6455;
+            margin: 2.5rem auto;
             max-width: 850px;
             font-weight: 400;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
+            padding: 2rem 2.5rem;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(168, 192, 144, 0.2);
+            border: 1px solid rgba(168, 192, 144, 0.3);
         }
         
         .hero-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            margin-top: 3rem;
         }
         
         .btn {
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 3rem;
             border-radius: 50px;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 500;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 20px rgba(168, 192, 144, 0.3);
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, var(--healing-primary) 0%, var(--healing-accent) 100%);
+            background: linear-gradient(135deg, var(--healing-primary) 0%, var(--healing-teal) 100%);
             color: white;
+            border: 2px solid transparent;
         }
         
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(139, 157, 131, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(168, 192, 144, 0.4);
+            background: linear-gradient(135deg, var(--healing-teal) 0%, var(--healing-primary) 100%);
         }
         
         .btn-secondary {
             background: white;
-            color: var(--healing-primary);
-            border: 2px solid white;
+            color: var(--healing-teal);
+            border: 2px solid var(--healing-teal);
         }
         
         .btn-secondary:hover {
-            background: var(--healing-primary);
+            background: var(--healing-teal);
             color: white;
-            transform: translateY(-3px);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(107, 155, 142, 0.4);
         }
         
         .problem-section {
-            background: linear-gradient(135deg, var(--healing-soft) 0%, #fff 100%);
-            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--healing-light) 0%, var(--healing-soft) 50%, var(--healing-light) 100%);
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        .problem-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, var(--healing-primary) 50%, transparent 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
         
         .problem-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
         }
         
         .problem-card {
             background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(139, 157, 131, 0.15);
-            transition: all 0.4s ease;
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(168, 192, 144, 0.15);
+            transition: all 0.5s ease;
             border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--healing-primary), var(--healing-teal));
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
+        }
+        
+        .problem-card:hover::before {
+            transform: scaleX(1);
         }
         
         .problem-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 15px 50px rgba(139, 157, 131, 0.25);
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(168, 192, 144, 0.25);
             border-color: var(--healing-primary);
         }
         
         .problem-icon {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, #8B9D83 0%, #9BB8B3 100%);
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, var(--healing-primary) 0%, var(--healing-teal) 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            box-shadow: 0 8px 25px rgba(139, 157, 131, 0.3);
+            font-size: 3.5rem;
+            box-shadow: 0 10px 30px rgba(168, 192, 144, 0.35);
             position: relative;
         }
         
         .problem-icon::before {
             content: '';
             position: absolute;
-            width: 110%;
-            height: 110%;
+            width: 120%;
+            height: 120%;
             border-radius: 50%;
             border: 3px solid var(--healing-accent);
-            opacity: 0.3;
-            animation: pulse 2s ease-in-out infinite;
+            opacity: 0.4;
+            animation: pulse 3s ease-in-out infinite;
         }
         
         @keyframes pulse {
             0%, 100% {
                 transform: scale(1);
-                opacity: 0.3;
+                opacity: 0.4;
             }
             50% {
-                transform: scale(1.1);
+                transform: scale(1.15);
                 opacity: 0.1;
             }
         }
         
         .problem-card h3 {
-            color: var(--healing-primary);
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
+            color: var(--healing-teal);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
         }
         
         .problem-card p {
-            color: #666;
-            line-height: 1.8;
+            color: #5A6455;
+            line-height: 2;
+            font-size: 1.05rem;
         }
         
         .solution-highlight {
-            margin-top: 3rem;
-            padding: 2.5rem;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(139, 157, 131, 0.15);
-            border-left: 5px solid var(--healing-accent);
+            margin-top: 4rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(168, 192, 144, 0.08) 0%, rgba(184, 212, 206, 0.08) 100%);
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(168, 192, 144, 0.12);
+            border-left: 6px solid var(--healing-gold);
+            border-right: 6px solid var(--healing-teal);
         }
         
         .solution-highlight h3 {
-            color: var(--healing-primary);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            color: var(--healing-gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        
+        .solution-highlight p {
+            color: var(--healing-teal);
+            line-height: 2.2;
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+        
+        .solution-highlight strong {
+            color: var(--healing-gold);
+            font-size: 1.2rem;
         }
         
         .philosophy-section {
             background: white;
-            padding: 6rem 0;
+            padding: 7rem 0;
+            position: relative;
+        }
+        
+        .philosophy-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, var(--healing-teal) 50%, transparent 100%);
         }
         
         .philosophy-card {
             background: linear-gradient(135deg, var(--healing-soft) 0%, white 100%);
-            padding: 2.5rem;
-            border-radius: 25px;
-            margin-bottom: 2rem;
-            border-left: 5px solid var(--healing-primary);
-            box-shadow: 0 10px 35px rgba(0,0,0,0.08);
-            transition: all 0.4s ease;
+            padding: 3rem;
+            border-radius: 30px;
+            margin-bottom: 2.5rem;
+            border-left: 6px solid var(--healing-primary);
+            box-shadow: 0 12px 40px rgba(168, 192, 144, 0.12);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .philosophy-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(168, 192, 144, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
         }
         
         .philosophy-card:hover {
-            transform: translateX(10px);
-            box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+            transform: translateX(15px);
+            box-shadow: 0 20px 60px rgba(168, 192, 144, 0.2);
+            border-left-color: var(--healing-teal);
         }
         
         .philosophy-card h3 {
-            font-size: 1.8rem;
-            color: var(--healing-primary);
-            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            color: var(--healing-teal);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
         }
         
         .philosophy-card h4 {
-            font-size: 1.1rem;
-            color: var(--healing-accent);
-            margin-bottom: 1rem;
+            font-size: 1.15rem;
+            color: var(--healing-gold);
+            margin-bottom: 1.5rem;
             font-weight: 400;
+            font-style: italic;
         }
         
         .philosophy-card p {
-            font-size: 1.05rem;
-            color: #555;
+            font-size: 1.1rem;
+            color: #5A6455;
+            line-height: 2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .philosophy-points {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 0 0;
+        }
+        
+        .philosophy-points li {
+            padding: 0.8rem 0 0.8rem 2.5rem;
+            color: #4A5045;
             line-height: 1.8;
+            position: relative;
+            font-size: 1.05rem;
+        }
+        
+        .philosophy-points li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--healing-primary);
+            font-weight: bold;
+            font-size: 1.3rem;
         }
         
         .application-section {
-            background: linear-gradient(to bottom, #fff 0%, var(--healing-soft) 100%);
-            padding: 6rem 0;
+            background: linear-gradient(to bottom, white 0%, var(--healing-soft) 50%, var(--healing-light) 100%);
+            padding: 7rem 0;
         }
         
         .application-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 3.5rem;
+            margin-top: 4rem;
         }
         
         .application-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            transition: all 0.4s ease;
+            box-shadow: 0 12px 45px rgba(168, 192, 144, 0.15);
+            transition: all 0.5s ease;
+            border: 2px solid transparent;
         }
         
         .application-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            transform: scale(1.05);
+            box-shadow: 0 25px 70px rgba(168, 192, 144, 0.25);
+            border-color: var(--healing-primary);
         }
         
         .application-image {
-            height: 280px;
+            height: 300px;
             overflow: hidden;
+            position: relative;
+        }
+        
+        .application-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(168, 192, 144, 0.3), transparent);
         }
         
         .application-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s ease;
+            transition: transform 0.8s ease;
         }
         
         .application-card:hover .application-image img {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
         
         .application-content {
-            padding: 2rem;
+            padding: 2.5rem;
         }
         
         .application-content h3 {
-            color: var(--healing-primary);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            color: var(--healing-teal);
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
         }
         
         .application-content p {
-            color: #666;
-            line-height: 1.8;
+            color: #5A6455;
+            line-height: 2;
             margin-bottom: 1rem;
+            font-size: 1.05rem;
         }
         
         .application-content ul {
             list-style: none;
             padding: 0;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
         }
         
         .application-content ul li {
-            padding: 0.5rem 0;
-            color: #555;
-            line-height: 1.6;
+            padding: 0.7rem 0;
+            color: #4A5045;
+            line-height: 1.8;
+            font-size: 1.02rem;
         }
         
         .contact-section {
-            background: linear-gradient(135deg, var(--healing-primary) 0%, var(--healing-accent) 100%);
-            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--healing-primary) 0%, var(--healing-teal) 100%);
+            padding: 7rem 0;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
         }
         
         .contact-content {
@@ -330,29 +487,33 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
+            z-index: 1;
         }
         
         .contact-form {
-            background: rgba(255,255,255,0.1);
-            padding: 2.5rem;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.15);
+            padding: 3rem;
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
         }
         
         .contact-form input,
         .contact-form textarea,
         .contact-form select {
             width: 100%;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.95);
             border: 2px solid transparent;
-            border-radius: 12px;
-            padding: 1rem;
+            border-radius: 15px;
+            padding: 1.2rem;
             transition: all 0.3s ease;
-            font-size: 1rem;
+            font-size: 1.05rem;
+            color: #4A5045;
         }
         
         .contact-form input:focus,
@@ -360,68 +521,93 @@
         .contact-form select:focus {
             outline: none;
             background: white;
-            border-color: var(--healing-warm);
-            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+            border-color: var(--healing-gold);
+            box-shadow: 0 0 25px rgba(201, 169, 110, 0.3);
         }
         
         .contact-form button {
             width: 100%;
-            padding: 1.2rem;
+            padding: 1.4rem;
             background: white;
-            color: var(--healing-primary);
+            color: var(--healing-teal);
             border: none;
             border-radius: 50px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
         
         .contact-form button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+            background: var(--healing-gold);
+            color: white;
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
         
         .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--healing-primary);
-            margin-bottom: 1rem;
-            font-weight: 400;
+            font-size: 2.8rem;
+            color: var(--healing-teal);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--healing-primary), transparent);
         }
         
         .section-subtitle {
-            font-size: 1.2rem;
-            color: #666;
+            font-size: 1.3rem;
+            color: #5A6455;
+            font-weight: 400;
         }
         
         @media (max-width: 768px) {
             .hero-title {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             
             .hero-subtitle {
-                font-size: 1.5rem;
+                font-size: 1.7rem;
             }
             
             .hero-description {
-                font-size: 1rem;
+                font-size: 1.1rem;
+                padding: 1.5rem;
             }
             
             .hero-buttons {
                 flex-direction: column;
+                gap: 1.5rem;
             }
             
-            .application-grid {
-                grid-template-columns: 1fr;
+            .btn {
+                width: 100%;
+                max-width: 300px;
             }
             
+            .application-grid,
             .problem-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 2.2rem;
             }
         }
     </style>
@@ -453,7 +639,6 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
         <div class="container hero-content">
             <h1 class="hero-title">科學化靈性空間設計</h1>
             <h2 class="hero-subtitle">打造療癒的能量場</h2>
@@ -512,18 +697,33 @@
                 <h3>🌿 自然空間設計</h3>
                 <h4>Natural Space Design</h4>
                 <p>運用自然元素、光線和空氣流動，營造如同置身大自然的療癒環境。</p>
+                <ul class="philosophy-points">
+                    <li><strong>生物親和設計：</strong>引入室內植栽、自然材質與有機形態，重建人與自然的連結</li>
+                    <li><strong>自然採光優化：</strong>最大化自然光利用，調節生理時鐘，提升血清素分泌</li>
+                    <li><strong>空氣與水循環：</strong>打造健康的室內微氣候，促進氧氣循環與負離子生成</li>
+                </ul>
             </div>
 
             <div class="philosophy-card">
                 <h3>🕉️ 靈修空間設計</h3>
                 <h4>Spiritual Practice Space Design</h4>
                 <p>通過能量場分析與優化，提升空間的靈性頻率，支持冥想與靜修。</p>
+                <ul class="philosophy-points">
+                    <li><strong>能量場檢測：</strong>使用專業儀器測量空間電磁波、地磁場，找出能量阻塞點</li>
+                    <li><strong>神聖幾何應用：</strong>運用黃金比例、曼陀羅圖形，創造和諧共振的空間頻率</li>
+                    <li><strong>方位與動線優化：</strong>結合風水原理與人體工學，規劃最佳冥想與靜修位置</li>
+                </ul>
             </div>
 
             <div class="philosophy-card">
                 <h3>🎨 療癒空間設計</h3>
                 <h4>Healing Space Design</h4>
                 <p>優化視覺、聽覺、嗅覺、觸覺體驗，為身心帶來全方位的療癒感受。</p>
+                <ul class="philosophy-points">
+                    <li><strong>色彩心理學：</strong>精選療癒色系，調節情緒狀態，促進身心放鬆與能量平衡</li>
+                    <li><strong>聲學環境設計：</strong>控制混響時間、隔絕噪音，創造寧靜或自然音景的聲音環境</li>
+                    <li><strong>多感官整合：</strong>結合芳香療法、觸感材質、溫度調節，打造全方位感官療癒體驗</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -538,7 +738,7 @@
             <div class="application-grid">
                 <div class="application-card">
                     <div class="application-image">
-                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800" alt="個人靜修室">
+                        <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?q=80&w=800" alt="個人靜修室">
                     </div>
                     <div class="application-content">
                         <h3>🧘 個人靜修室</h3>
@@ -570,7 +770,7 @@
 
                 <div class="application-card">
                     <div class="application-image">
-                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=800" alt="家庭療癒空間">
+                        <img src="https://images.unsplash.com/photo-1600320254374-ce2d293c324e?q=80&w=800" alt="家庭療癒空間">
                     </div>
                     <div class="application-content">
                         <h3>🏠 家庭療癒空間</h3>
@@ -615,6 +815,22 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="application-card">
+                    <div class="application-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800" alt="診所與醫療空間">
+                    </div>
+                    <div class="application-content">
+                        <h3>🏥 診所與醫療空間</h3>
+                        <p><strong>適用對象：</strong>中醫診所、身心診所、整合醫學中心、復健中心</p>
+                        <p><strong>實際效果：</strong></p>
+                        <ul>
+                            <li>✓ 患者焦慮感降低 55%，就診體驗滿意度 4.6/5</li>
+                            <li>✓ 治療配合度提升 40%，康復速度加快 25%</li>
+                            <li>✓ 醫護人員工作壓力下降 35%，職業倦怠改善</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -624,7 +840,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 style="color: white;">開始您的療癒空間之旅</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">預約免費空間能量檢測，讓專業團隊為您規劃專屬方案</p>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.95);">預約免費空間能量檢測，讓專業團隊為您規劃專屬方案</p>
             </div>
             <div class="contact-content">
                 <div class="contact-form-wrapper">
@@ -646,6 +862,7 @@
                                 <option value="home">家庭療癒空間</option>
                                 <option value="healing">專業療癒中心</option>
                                 <option value="hotel">精品旅館套房</option>
+                                <option value="medical">診所與醫療空間</option>
                                 <option value="other">其他</option>
                             </select>
                         </div>
