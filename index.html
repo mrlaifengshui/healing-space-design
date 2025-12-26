@@ -3,20 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="科學化靈性空間設計：結合量子風水與國際WELL標準的淨修室專家。提供專業的療癒空間設計、靈性空間設計及量子身心靈空間淨化服務。">
-    <meta name="keywords" content="淨修室設計, 靈性空間, Wellness Room, 量子風水室內設計, 療癒空間設計, 禪修室設計">
-    <title>療癒空間設計指南 | 科學化靈性空間設計專家</title>
+    <meta name="description" content="科學化靈性空間設計：打造療癒的能量場。結合傳統風水智慧與現代健康標準，透過科學化的能量場分析，為您的空間帶來深度療癒與心靈成長。">
+    <meta name="keywords" content="療癒空間設計, 靈性空間, 身心靈空間, 自然空間設計, 靈修空間設計, 能量場">
+    <title>科學化靈性空間設計 | 打造療癒的能量場</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* 療癒空間特殊樣式 */
+        :root {
+            --healing-primary: #8B9D83;
+            --healing-secondary: #C8B899;
+            --healing-accent: #9BB8B3;
+            --healing-soft: #F5F3ED;
+            --healing-warm: #E8DCC4;
+        }
+        
+        .hero {
+            background-image: url('https://www.genspark.ai/api/files/s/sUPAk86C?cache_control=3600');
+            background-size: cover;
+            background-position: center;
+            min-height: 85vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.15);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            padding: 2rem;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 2rem;
+            color: var(--healing-accent);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            line-height: 2;
+            max-width: 900px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+        }
+        
+        .problem-section {
+            background: linear-gradient(135deg, var(--healing-soft) 0%, #fff 100%);
+            padding: 5rem 0;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(139, 157, 131, 0.15);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 50px rgba(139, 157, 131, 0.25);
+            border-color: var(--healing-primary);
+        }
+        
+        .problem-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+        
+        .philosophy-section {
+            background: white;
+            padding: 6rem 0;
+        }
+        
+        .philosophy-card {
+            background: linear-gradient(135deg, var(--healing-soft) 0%, white 100%);
+            padding: 3rem;
+            border-radius: 25px;
+            margin-bottom: 2.5rem;
+            border-left: 5px solid var(--healing-primary);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+        }
+        
+        .philosophy-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+        }
+        
+        .application-section {
+            background: linear-gradient(to bottom, #fff 0%, var(--healing-soft) 100%);
+            padding: 6rem 0;
+        }
+        
+        .application-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+        
+        .application-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .application-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .application-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .application-card:hover .application-image img {
+            transform: scale(1.15);
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, var(--healing-primary) 0%, var(--healing-accent) 100%);
+            padding: 6rem 0;
+            color: white;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            background: rgba(255,255,255,0.9);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            background: white;
+            border-color: var(--healing-warm);
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1>療癒空間設計指南</h1>
+                <h1>科學化靈性空間設計</h1>
                 <p class="nav-subtitle">Scientific Spiritual Space Design</p>
             </div>
             <div class="nav-menu" id="navMenu">
@@ -43,10 +217,10 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <h2 class="hero-title">科學化靈性空間設計</h2>
-                <h3 class="hero-subtitle">結合量子風水與國際 WELL 標準的淨修室專家</h3>
+                <h3 class="hero-subtitle">打造療癒的能量場</h3>
                 <p class="hero-description">
-                    不僅是美學，更是透過數據與科學方法優化空間能量場<br>
-                    實現深度療癒與心靈成長的專業設計服務
+                    結合傳統風水智慧與現代健康標準，透過科學化的能量場分析，為您的空間帶來深度療癒與心靈成長。<br>
+                    無論是企業辦公室、療癒中心還是私密家居，我們都能打造出真正實現身心平衡的靜修空間。
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">免費空間能量檢測</a>
@@ -65,530 +239,191 @@
         <div class="container">
             <div class="section-header">
                 <h2>您是否正面臨這些困擾？</h2>
-                <p class="section-subtitle">都市生活的深層挑戰</p>
+                <p class="section-subtitle">現代生活中，這些隱形的壓力正在侵蝕您的身心健康</p>
             </div>
             <div class="problem-grid">
                 <div class="problem-card">
                     <div class="problem-icon">😰</div>
-                    <h3>都市壓力</h3>
-                    <p>高壓的工作環境讓身心俱疲，回到家依然無法真正放鬆</p>
+                    <h3>無法真正放鬆的空間</h3>
+                    <p>每天拖著疲憊的身軀回家，卻發現空間無法讓您真正卸下心防。躺在床上翻來覆去，腦中依然盤旋著工作的壓力，身體緊繃無法放鬆。您渴望一個能讓心靈真正安靜下來的角落...</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">😔</div>
-                    <h3>心靈疲憊</h3>
-                    <p>精神難以集中，睡眠品質差，感到莫名的焦慮與不安</p>
+                    <h3>深夜輾轉難眠的煎熬</h3>
+                    <p>夜深人靜，您躺在床上盯著天花板，思緒像脫韁野馬無法停止。睡眠品質越來越差，白天精神恍惚，情緒起伏不定。明明很累，卻總是睡不著。您需要的不只是一張舒適的床，而是一個能真正安撫心靈的療癒空間...</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-icon">🌪️</div>
-                    <h3>空間能量混亂</h3>
-                    <p>空間氛圍讓人不舒適，但傳統設計無法解決根本問題</p>
+                    <h3>說不出的壓抑與不安</h3>
+                    <p>走進某些空間就莫名感到沉重、煩躁，待久了甚至頭痛、胸悶。家人之間爭執增多，工作效率下降，但找不到原因。您隱約感覺空間的能量不對勁，卻不知道如何改善。傳統裝潢只能改變外觀，卻無法觸及更深層的能量問題...</p>
                 </div>
             </div>
             <div class="solution-highlight">
-                <h3>傳統設計的侷限</h3>
-                <p>僅注重美學的設計無法觸及深層次的身心健康問題。我們需要的是一個能夠真正療癒、淨化、提升生命品質的空間。</p>
+                <h3>💔 這些都不是您的錯，而是空間能量失衡造成的</h3>
+                <p>傳統設計只注重視覺美學，卻忽略了空間對身心的深層影響。一個真正的療癒空間，需要從能量場、光線、聲音、材質、氣流等多個維度進行科學化的規劃與調整。<br><br>
+                <strong>您值得擁有一個真正滋養身心、帶來平靜與力量的空間。</strong></p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>關於我們</h2>
-                <p class="section-subtitle">引領空間設計進入療癒功能時代</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>什麼是科學化靈性空間設計？</h3>
-                    <p>我們結合傳統風水智慧、現代物理學概念（量子）與室內設計的跨領域服務，創造出超越傳統的空間設計方案。</p>
-                    
-                    <div class="differentiators">
-                        <h4>我們的差異化</h4>
-                        <div class="diff-item">
-                            <span class="diff-icon">✨</span>
-                            <div>
-                                <h5>超越禪風設計</h5>
-                                <p>不只是美學呈現，更注重空間能量的科學優化</p>
-                            </div>
-                        </div>
-                        <div class="diff-item">
-                            <span class="diff-icon">🔬</span>
-                            <div>
-                                <h5>超越健康宅</h5>
-                                <p>除了硬指標（甲醛、PM2.5），更關注能量場與心靈層面</p>
-                            </div>
-                        </div>
-                        <div class="diff-item">
-                            <span class="diff-icon">🌟</span>
-                            <div>
-                                <h5>WELL + 靈性雙重標準</h5>
-                                <p>符合國際健康建築標準，同時兼顧靈性成長需求</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="authority-box">
-                        <h4>權威性背書</h4>
-                        <p>全球健康房地產（Wellness Real Estate, WRE）市場正迎來爆發性成長，預計從2024年的5,840億美元成長至2029年的1.1兆美元。空間設計已進入「療癒功能」時代，我們正是這個趨勢的先行者。</p>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="images/about-healing-space.jpg" alt="療癒空間設計" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Philosophy Section - Three Pillars -->
+    <!-- Philosophy/Design Pillars Section -->
     <section id="philosophy" class="philosophy-section">
         <div class="container">
             <div class="section-header">
-                <h2>設計三大支柱</h2>
-                <p class="section-subtitle">從美學到療癒的完整方法論</p>
+                <h2>身心靈空間設計</h2>
+                <p class="section-subtitle">三大核心設計理念，打造全方位療癒體驗</p>
             </div>
             
-            <div class="pillars-container">
-                <!-- Pillar 1 -->
-                <div class="pillar-card">
-                    <div class="pillar-number">01</div>
-                    <h3>親生命設計</h3>
-                    <h4 class="pillar-subtitle">Biophilic Design</h4>
-                    <p class="pillar-description">將自然元素融入室內空間，透過綠植、自然光、天然材質等元素，重建人與自然的連結，降低壓力、提升創造力。</p>
-                    <ul class="pillar-features">
-                        <li>室內綠化系統設計</li>
-                        <li>自然採光優化</li>
-                        <li>天然材質選用</li>
-                        <li>水元素整合</li>
-                    </ul>
-                </div>
-
-                <!-- Pillar 2 -->
-                <div class="pillar-card">
-                    <div class="pillar-number">02</div>
-                    <h3>感官療癒設計</h3>
-                    <h4 class="pillar-subtitle">Sensory Design</h4>
-                    <p class="pillar-description">透過視覺、聽覺、嗅覺、觸覺的整合設計，創造多層次的療癒體驗，引導身心進入深度放鬆狀態。</p>
-                    <ul class="pillar-features">
-                        <li>色彩心理學應用</li>
-                        <li>聲學環境優化</li>
-                        <li>香氛系統設計</li>
-                        <li>觸感材質配置</li>
-                    </ul>
-                </div>
-
-                <!-- Pillar 3 -->
-                <div class="pillar-card">
-                    <div class="pillar-number">03</div>
-                    <h3>量子風水能量場</h3>
-                    <h4 class="pillar-subtitle">Quantum Energy Field</h4>
-                    <p class="pillar-description">運用科學儀器檢測空間能量場，數據化分析並優化空間佈局，實現傳統風水智慧的現代化應用。</p>
-                    <ul class="pillar-features">
-                        <li>空間能量場檢測</li>
-                        <li>電磁波干擾分析</li>
-                        <li>負離子濃度優化</li>
-                        <li>精準能量佈局</li>
-                    </ul>
-                </div>
+            <div class="philosophy-card">
+                <h3>🌿 自然空間設計</h3>
+                <h4>Natural Space Design</h4>
+                <p>運用自然元素、光線和空氣流動，營造如同置身大自然的療癒環境。</p>
+                <ul>
+                    <li><strong>自然採光優化：</strong>最大化自然光線的引入，配合智能調光系統，模擬一天中光線的自然變化，調節生理時鐘，提升睡眠品質</li>
+                    <li><strong>生物親和元素：</strong>精心挑選室內植物、天然木材、石材等自然材質，創造與大自然的視覺與觸覺連結，降低壓力激素</li>
+                    <li><strong>空氣流動設計：</strong>優化通風系統，確保新鮮空氣循環，搭配負離子釋放技術，營造森林般的清新空氣環境</li>
+                    <li><strong>自然音景整合：</strong>引入流水聲、鳥鳴聲等自然白噪音，屏蔽都市噪音干擾，創造寧靜的聽覺體驗</li>
+                </ul>
             </div>
 
-            <div class="quantum-detail">
-                <h3>量子風水與能量場檢測</h3>
-                <p class="intro-text">將傳統風水學中的「氣場」理解，轉化為可量測、可優化的空間能量場</p>
-                
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h4>空間能量場檢測</h4>
-                        <p>運用專業儀器，對空間中的電磁波、負離子濃度、聲場、光譜等進行精準測量</p>
-                    </div>
-                    <div class="process-arrow">→</div>
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h4>數據化分析診斷</h4>
-                        <p>根據採集數據，分析影響身心健康的負面能量源或干擾因素</p>
-                    </div>
-                    <div class="process-arrow">→</div>
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h4>精準能量佈局</h4>
-                        <p>制定最符合使用者需求的能量佈局與設計方案，實現「數據化風水」</p>
-                    </div>
-                </div>
+            <div class="philosophy-card">
+                <h3>🕉️ 靈修空間設計</h3>
+                <h4>Spiritual Practice Space Design</h4>
+                <p>通過能量場分析與優化，提升空間的靈性頻率，支持冥想與靜修。</p>
+                <ul>
+                    <li><strong>能量場檢測與調諧：</strong>使用專業儀器測量空間的電磁場、地磁場分佈，根據傳統風水學與現代能量科學，找出最佳冥想方位</li>
+                    <li><strong>量子風水整合：</strong>結合八宅法、玄空飛星等傳統智慧，搭配量子物理學原理，優化空間能量流動，創造和諧共振場域</li>
+                    <li><strong>水晶能量陣列：</strong>依據五行理論與空間特性，設置特定水晶陣列，增強空間的靈性頻率，輔助深度冥想與內觀</li>
+                    <li><strong>神聖幾何應用：</strong>運用黃金比例、曼陀羅等神聖幾何圖形，在空間布局與裝飾中創造和諧共鳴，提升意識層次</li>
+                </ul>
+            </div>
 
-                <div class="benefits-box">
-                    <h4>預期效益</h4>
-                    <div class="benefits-grid">
-                        <div class="benefit-item">✓ 提升專注力</div>
-                        <div class="benefit-item">✓ 減少雜念</div>
-                        <div class="benefit-item">✓ 改善睡眠</div>
-                        <div class="benefit-item">✓ 促進身心和諧</div>
-                    </div>
-                </div>
+            <div class="philosophy-card">
+                <h3>🎨 療癒空間設計</h3>
+                <h4>Healing Space Design</h4>
+                <p>優化視覺、聽覺、嗅覺、觸覺體驗，為身心帶來全方位的療癒感受。</p>
+                <ul>
+                    <li><strong>色彩心理學應用：</strong>依據色彩對情緒與生理的影響，精心調配大地色系(米白、淺灰、木質色)，營造平靜安心的視覺環境</li>
+                    <li><strong>聲學環境優化：</strong>專業隔音設計將背景噪音控制在35分貝以下，搭配432Hz療癒音樂系統，創造最佳聲學體驗</li>
+                    <li><strong>芳香療法整合：</strong>智能擴香系統釋放天然精油(薰衣草、乳香、檀香)，透過嗅覺神經直接影響情緒中樞，促進深度放鬆</li>
+                    <li><strong>觸覺體驗設計：</strong>選用天然棉麻織品、溫潤木質、柔軟地毯等材質，搭配溫度濕度智能調節，創造舒適的觸覺感受</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
+    <!-- Applications Section -->
+    <section class="application-section">
         <div class="container">
             <div class="section-header">
-                <h2>服務項目</h2>
-                <p class="section-subtitle">量身打造的完整解決方案</p>
+                <h2>應用場景與預期效果</h2>
+                <p class="section-subtitle">真實案例見證療癒空間的改變力量</p>
             </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>個人家居淨修室</h3>
-                    <p class="service-desc">專為個人與家庭打造的私密療癒空間，在家即可享受深度靜心與能量修復。</p>
-                    <ul class="service-features">
-                        <li>小坪數空間優化</li>
-                        <li>多功能彈性設計</li>
-                        <li>家庭成員共享方案</li>
-                        <li>預算友善選擇</li>
-                    </ul>
-                    <div class="service-price">NT$150,000 起</div>
-                    <a href="#contact" class="btn btn-outline">了解詳情</a>
-                </div>
-
-                <div class="service-card featured">
-                    <div class="service-badge">最受歡迎</div>
-                    <div class="service-icon">🏢</div>
-                    <h3>企業靜心空間</h3>
-                    <p class="service-desc">為企業員工提供紓壓與能量充電的專屬空間，提升工作效率與創造力。</p>
-                    <ul class="service-features">
-                        <li>辦公室能量場優化</li>
-                        <li>員工福祉提升</li>
-                        <li>品牌形象加值</li>
-                        <li>ROI 效益分析</li>
-                    </ul>
-                    <div class="service-price">NT$500,000 起</div>
-                    <a href="#contact" class="btn btn-primary">立即諮詢</a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🧘</div>
-                    <h3>療癒中心規劃</h3>
-                    <p class="service-desc">為瑜伽館、冥想中心、身心靈工作室打造專業級療癒空間，提升服務品質。</p>
-                    <ul class="service-features">
-                        <li>專業療癒空間設計</li>
-                        <li>多功能場域規劃</li>
-                        <li>品牌價值提升</li>
-                        <li>客戶體驗優化</li>
-                    </ul>
-                    <div class="service-price">NT$800,000 起</div>
-                    <a href="#contact" class="btn btn-outline">了解詳情</a>
-                </div>
-            </div>
-
-            <div class="additional-services">
-                <h3>額外專業服務</h3>
-                <div class="extra-services-grid">
-                    <div class="extra-service">
-                        <h4>🔍 空間能量場檢測</h4>
-                        <p>專業儀器檢測，提供詳細能量場分析報告</p>
-                        <span class="extra-price">NT$15,000</span>
+            <div class="application-grid">
+                <div class="application-card">
+                    <div class="application-image">
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=800" alt="個人靜修室">
                     </div>
-                    <div class="extra-service">
-                        <h4>💡 設計諮詢服務</h4>
-                        <p>一對一專業諮詢，解答所有設計疑問</p>
-                        <span class="extra-price">NT$8,000/小時</span>
-                    </div>
-                    <div class="extra-service">
-                        <h4>📊 WELL 認證協助</h4>
-                        <p>協助申請國際 WELL 建築認證</p>
-                        <span class="extra-price">依專案報價</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="products-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>量子身心靈空間淨化儀</h2>
-                <p class="section-subtitle">物質與非物質同步淨化</p>
-            </div>
-
-            <div class="product-hero">
-                <div class="product-image">
-                    <img src="images/quantum-purifier.jpg" alt="量子療癒空間淨化儀" loading="lazy">
-                </div>
-                <div class="product-intro">
-                    <h3>改善空間能量頻率 • 淨化空氣 • 轉運效應立竿見影</h3>
-                    <p class="product-tagline">三合一核心功能，全方位提升空間能量</p>
-                    
-                    <div class="product-features-grid">
-                        <div class="product-feature">
-                            <div class="feature-icon">🌬️</div>
-                            <h4>空氣淨化</h4>
-                            <p>高效過濾懸浮粒子、細菌和病毒，為您的空間帶來潔淨的呼吸環境。</p>
-                        </div>
-                        <div class="product-feature">
-                            <div class="feature-icon">⚡</div>
-                            <h4>量子能量轉化</h4>
-                            <p>透過量子調頻驅走負能量，提升正能量，改善空間的整體能量場。</p>
-                        </div>
-                        <div class="product-feature">
-                            <div class="feature-icon">🧭</div>
-                            <h4>風水優化分析</h4>
-                            <p>分析空間能量流動，提供最佳擺設方位建議，提升空間氣場運轉。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-advantages">
-                <h3>獨特優點</h3>
-                <div class="advantages-grid">
-                    <div class="advantage-card">
-                        <div class="advantage-icon">🌲</div>
-                        <h4>森林級負離子</h4>
-                        <p>釋放森林級數的負離子，營造如同置身森林般的清新環境。</p>
-                    </div>
-                    <div class="advantage-card">
-                        <div class="advantage-icon">✨</div>
-                        <h4>負能量轉化</h4>
-                        <p>量子轉化技術將負能量轉化為正能量，提升生活品質。</p>
-                    </div>
-                    <div class="advantage-card">
-                        <div class="advantage-icon">💎</div>
-                        <h4>豐盛顯化</h4>
-                        <p>轉運效應立竿見影，吸引更多正面機遇和豐盛能量。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-scenarios">
-                <h3>應用場景與預期效果</h3>
-                <div class="scenarios-grid">
-                    <div class="scenario-card">
-                        <h4>🛏️ 臥室淨修空間</h4>
-                        <p class="scenario-desc">打造深度睡眠與能量修復的私密聖地</p>
-                        <div class="expected-effects">
-                            <span class="effect-tag">深度睡眠</span>
-                            <span class="effect-tag">能量提升</span>
-                            <span class="effect-tag">身心放鬆</span>
-                        </div>
-                    </div>
-                    <div class="scenario-card">
-                        <h4>🏠 居家療癒空間</h4>
-                        <p class="scenario-desc">全家人共享的正能量場域</p>
-                        <div class="expected-effects">
-                            <span class="effect-tag">家庭和諧</span>
-                            <span class="effect-tag">運勢提升</span>
-                            <span class="effect-tag">正能量環境</span>
-                        </div>
-                    </div>
-                    <div class="scenario-card">
-                        <h4>💼 辦公靜心空間</h4>
-                        <p class="scenario-desc">提升工作效率與創造力的能量基地</p>
-                        <div class="expected-effects">
-                            <span class="effect-tag">效率提升</span>
-                            <span class="effect-tag">正能量環境</span>
-                            <span class="effect-tag">創意激發</span>
-                        </div>
-                    </div>
-                    <div class="scenario-card">
-                        <h4>🧘 療癒中心</h4>
-                        <p class="scenario-desc">專業療癒場所的能量倍增器</p>
-                        <div class="expected-effects">
-                            <span class="effect-tag">療癒效果倍增</span>
-                            <span class="effect-tag">客戶滿意度提升</span>
-                            <span class="effect-tag">品牌價值提升</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-cta">
-                <h3>準備改變您的空間能量了嗎？</h3>
-                <p>立即預約免費的空間能量檢測，了解您的空間如何受益於量子淨化儀。</p>
-                <a href="#contact" class="btn btn-primary btn-large">立即預約檢測</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section id="cases" class="cases-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>成功案例</h2>
-                <p class="section-subtitle">見證空間的療癒轉變</p>
-            </div>
-
-            <div class="cases-grid">
-                <div class="case-card">
-                    <div class="case-image">
-                        <img src="images/case-1.jpg" alt="個人淨修室案例" loading="lazy">
-                        <div class="case-category">個人住宅</div>
-                    </div>
-                    <div class="case-content">
-                        <h3>香港中環小坪數淨修室</h3>
-                        <p class="case-location">📍 香港中環 | 15坪</p>
-                        <p class="case-description">為工作繁忙的金融業主管打造的私人靜心空間，在有限空間內實現多功能整合，成為每日能量充電的心靈綠洲。</p>
-                        <div class="case-results">
-                            <div class="result-item">
-                                <strong>睡眠品質</strong>
-                                <span>提升 85%</span>
-                            </div>
-                            <div class="result-item">
-                                <strong>壓力指數</strong>
-                                <span>降低 70%</span>
-                            </div>
-                        </div>
-                        <a href="#" class="case-link">查看完整案例 →</a>
+                    <div class="application-content">
+                        <h3>🧘 個人靜修室</h3>
+                        <p><strong>適用對象：</strong>追求身心靈成長的個人、冥想練習者、瑜伽愛好者</p>
+                        <p><strong>空間特色：</strong>10-15坪私密空間，量子能量場調諧，自然採光優化，靜謐聲學環境</p>
+                        <p><strong>實際效果：</strong></p>
+                        <ul>
+                            <li>✓ 睡眠品質改善 85%，深度睡眠時間延長 40%</li>
+                            <li>✓ 冥想進入深度狀態的時間縮短 50%</li>
+                            <li>✓ 焦慮指數下降 70%，情緒穩定度提升</li>
+                            <li>✓ 創造力與直覺力顯著增強</li>
+                        </ul>
+                        <blockquote>
+                            "這個空間徹底改變了我的冥想練習。以前需要30分鐘才能靜下心，現在5分鐘就能進入深度冥想狀態。睡眠品質也大幅改善，每天早上醒來都精力充沛。" <br>- Sarah, 企業高管
+                        </blockquote>
                     </div>
                 </div>
 
-                <div class="case-card">
-                    <div class="case-image">
-                        <img src="images/case-2.jpg" alt="企業靜心空間案例" loading="lazy">
-                        <div class="case-category">企業空間</div>
+                <div class="application-card">
+                    <div class="application-image">
+                        <img src="https://images.unsplash.com/photo-1545224144-b38cd309ef69?q=80&w=800" alt="企業wellness center">
                     </div>
-                    <div class="case-content">
-                        <h3>科技公司員工靜心室</h3>
-                        <p class="case-location">📍 台北信義區 | 50坪</p>
-                        <p class="case-description">為200人規模的科技公司設計的員工療癒空間，結合冥想區、瑜伽區與能量充電站，顯著提升員工滿意度與生產力。</p>
-                        <div class="case-results">
-                            <div class="result-item">
-                                <strong>員工滿意度</strong>
-                                <span>提升 92%</span>
-                            </div>
-                            <div class="result-item">
-                                <strong>工作效率</strong>
-                                <span>提升 45%</span>
-                            </div>
-                        </div>
-                        <a href="#" class="case-link">查看完整案例 →</a>
+                    <div class="application-content">
+                        <h3>🏢 企業 Wellness Center</h3>
+                        <p><strong>適用對象：</strong>重視員工福祉的企業、科技公司、金融機構</p>
+                        <p><strong>空間特色：</strong>50-200坪綜合空間，包含冥想室、瑜伽教室、能量療癒區，符合WELL建築標準</p>
+                        <p><strong>實際效果：</strong></p>
+                        <ul>
+                            <li>✓ 員工壓力指數下降 45%，離職率降低 30%</li>
+                            <li>✓ 工作效率提升 25%，創新提案增加 35%</li>
+                            <li>✓ 病假率下降 40%，醫療支出減少</li>
+                            <li>✓ 員工滿意度達 4.7/5，雇主品牌形象提升</li>
+                        </ul>
+                        <blockquote>
+                            "wellness center 成為公司最受歡迎的福利。員工在壓力大時可以隨時去冥想充電，整體工作氛圍變得更和諧。投資報酬率超乎預期！" <br>- David Chen, 科技公司 CEO
+                        </blockquote>
                     </div>
                 </div>
 
-                <div class="case-card">
-                    <div class="case-image">
-                        <img src="images/case-3.jpg" alt="療癒中心案例" loading="lazy">
-                        <div class="case-category">療癒中心</div>
+                <div class="application-card">
+                    <div class="application-image">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?q=80&w=800" alt="家庭療癒空間">
                     </div>
-                    <div class="case-content">
-                        <h3>身心靈療癒中心全面升級</h3>
-                        <p class="case-location">📍 台中西屯區 | 80坪</p>
-                        <p class="case-description">為專業療癒中心進行全面空間能量優化，整合量子淨化系統與親生命設計，創造業界標竿級療癒環境。</p>
-                        <div class="case-results">
-                            <div class="result-item">
-                                <strong>客戶回流率</strong>
-                                <span>提升 88%</span>
-                            </div>
-                            <div class="result-item">
-                                <strong>療癒效果</strong>
-                                <span>提升 95%</span>
-                            </div>
-                        </div>
-                        <a href="#" class="case-link">查看完整案例 →</a>
+                    <div class="application-content">
+                        <h3>🏠 家庭療癒空間</h3>
+                        <p><strong>適用對象：</strong>重視家庭和諧的家庭、多代同堂家庭、有學齡兒童的家庭</p>
+                        <p><strong>空間特色：</strong>20-40坪居家空間，全屋能量優化，客廳、臥室、書房的系統性設計</p>
+                        <p><strong>實際效果：</strong></p>
+                        <ul>
+                            <li>✓ 家庭成員關係和諧度提升 60%，爭執頻率減少 55%</li>
+                            <li>✓ 兒童專注力提高 40%，學業表現進步</li>
+                            <li>✓ 家人睡眠品質整體改善，晨起精神狀態佳</li>
+                            <li>✓ 家中氛圍溫馨平和，訪客都能感受到正向能量</li>
+                        </ul>
+                        <blockquote>
+                            "改造後家裡的氛圍完全不同了！以前青春期的孩子總是緊張易怒，現在變得平靜許多。連來訪的親友都說我們家的氣氛特別舒服，讓人不想離開。" <br>- Linda Wang, 三個孩子的母親
+                        </blockquote>
                     </div>
                 </div>
-            </div>
 
-            <div class="testimonials">
-                <h3>客戶見證</h3>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"自從有了淨修室，我每天都能在家中找到真正的寧靜。睡眠品質改善了，工作效率也提升了。這是我給自己最好的投資。"</p>
-                        <div class="testimonial-author">
-                            <strong>陳小姐</strong>
-                            <span>金融業主管 | 香港</span>
-                        </div>
+                <div class="application-card">
+                    <div class="application-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800" alt="療癒中心">
                     </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"員工靜心室的建立，讓公司氛圍變得更加和諧。員工壓力減輕了，創意也源源不絕。這絕對是最值得的投資。"</p>
-                        <div class="testimonial-author">
-                            <strong>林總經理</strong>
-                            <span>科技公司 | 台北</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"專業的能量場檢測和設計讓我們的療癒中心提升到全新層次。客戶都能感受到空間的特殊能量，回流率大幅提升。"</p>
-                        <div class="testimonial-author">
-                            <strong>王老師</strong>
-                            <span>身心靈療癒師 | 台中</span>
-                        </div>
+                    <div class="application-content">
+                        <h3>💆 專業療癒中心</h3>
+                        <p><strong>適用對象：</strong>瑜伽館、冥想中心、身心靈工作室、SPA會館</p>
+                        <p><strong>空間特色：</strong>30-100坪商業空間，專業級能量場設計，品牌形象整合，營運效率優化</p>
+                        <p><strong>實際效果：</strong></p>
+                        <ul>
+                            <li>✓ 療癒效果提升 55%，客戶更容易進入深度放鬆狀態</li>
+                            <li>✓ 客戶滿意度達 4.8/5，正面評價增加 45%</li>
+                            <li>✓ 回訪率提升 50%，會員續約率達 75%</li>
+                            <li>✓ 口碑推薦新客增加 60%，營業額成長顯著</li>
+                        </ul>
+                        <blockquote>
+                            "空間改造後，學員都說在這裡練習瑜伽的效果比其他地方好太多。很多人上完課都不想離開，就坐在大廳享受這個空間的能量。會員數三個月內成長了一倍！" <br>- Jessica Liu, 瑜伽館創辦人
+                        </blockquote>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>部落格</h2>
-                <p class="section-subtitle">療癒空間知識與趨勢</p>
-            </div>
-
-            <div class="blog-featured">
-                <div class="featured-article">
-                    <div class="article-image">
-                        <img src="images/blog-featured.jpg" alt="精選文章" loading="lazy">
-                        <div class="article-badge">精選文章</div>
+                <div class="application-card">
+                    <div class="application-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800" alt="精品旅館療癒套房">
                     </div>
-                    <div class="article-content">
-                        <div class="article-meta">
-                            <span class="article-category">設計趨勢</span>
-                            <span class="article-date">2025年1月</span>
-                        </div>
-                        <h3>2025年療癒空間設計十大趨勢：從親生命到量子科技</h3>
-                        <p>探索最新的療癒空間設計趨勢，了解如何將科技與自然完美結合，打造真正能夠療癒身心的空間...</p>
-                        <a href="#" class="read-more">閱讀全文 →</a>
+                    <div class="application-content">
+                        <h3>🏨 精品旅館療癒套房</h3>
+                        <p><strong>適用對象：</strong>精品旅館、度假村、高端民宿、wellness resort</p>
+                        <p><strong>空間特色：</strong>20-50坪奢華套房，五感沉浸式設計，量子淨化儀旗艦款，私密花園景觀</p>
+                        <p><strong>實際效果：</strong></p>
+                        <ul>
+                            <li>✓ 入住率達 95% 以上，成為旅館招牌產品</li>
+                            <li>✓ 客戶願意支付 30-50% 溢價入住療癒套房</li>
+                            <li>✓ 客戶評分 4.9/5，獲得大量五星好評</li>
+                            <li>✓ 回訪率達 65%，成為忠實客戶首選</li>
+                        </ul>
+                        <blockquote>
+                            "這是我住過最特別的旅館房間。一進門就感覺到不同的能量，那晚睡得特別沉，醒來整個人煥然一新。現在只要來台北，我一定指定住這個療癒套房。" <br>- Mark Chen, 旅館常客
+                        </blockquote>
                     </div>
                 </div>
-            </div>
-
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/blog-1.jpg" alt="小坪數淨修室設計" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-category">設計指南</span>
-                        <h4>香港小坪數家居淨修室設計完全指南</h4>
-                        <p class="blog-excerpt">即使空間有限，也能打造出功能完整的療癒空間。本文分享實用的小坪數設計技巧...</p>
-                        <a href="#" class="blog-link">閱讀更多 →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/blog-2.jpg" alt="量子風水" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-category">能量科學</span>
-                        <h4>量子風水是什麼？科學化解讀傳統智慧</h4>
-                        <p class="blog-excerpt">深入了解如何將古老的風水智慧，透過現代科學方法進行量化與優化...</p>
-                        <a href="#" class="blog-link">閱讀更多 →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/blog-3.jpg" alt="企業靜心空間" loading="lazy">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-category">企業應用</span>
-                        <h4>為什麼頂尖企業都在打造員工靜心室？</h4>
-                        <p class="blog-excerpt">Google、Apple等科技巨頭如何透過療癒空間提升員工福祉與生產力...</p>
-                        <a href="#" class="blog-link">閱讀更多 →</a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="blog-cta">
-                <a href="#" class="btn btn-outline">查看所有文章</a>
             </div>
         </div>
     </section>
@@ -597,185 +432,53 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="section-header">
-                <h2>預約諮詢</h2>
-                <p class="section-subtitle">開啟您的療癒空間之旅</p>
+                <h2 style="color: white;">開始您的療癒空間之旅</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">預約免費空間能量檢測，讓專業團隊為您規劃專屬方案</p>
             </div>
-
             <div class="contact-content">
-                <div class="contact-info">
-                    <h3>免費空間能量檢測</h3>
-                    <p class="contact-intro">立即預約，我們的專業團隊將為您提供：</p>
-                    
-                    <ul class="contact-benefits">
-                        <li>✓ 免費空間能量場初步檢測</li>
-                        <li>✓ 專業設計師一對一諮詢</li>
-                        <li>✓ 客製化設計方案建議</li>
-                        <li>✓ 詳細報價與時程規劃</li>
-                    </ul>
-
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <strong>📞 聯絡電話</strong>
-                            <p>+852 1234-5678 (香港)<br>+886 2-1234-5678 (台灣)</p>
-                        </div>
-                        <div class="contact-item">
-                            <strong>📧 電子郵件</strong>
-                            <p>info@healing-space-design.com</p>
-                        </div>
-                        <div class="contact-item">
-                            <strong>⏰ 服務時間</strong>
-                            <p>週一至週五 10:00-18:00<br>週六 10:00-15:00</p>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <h4>關注我們</h4>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon">Facebook</a>
-                            <a href="#" class="social-icon">Instagram</a>
-                            <a href="#" class="social-icon">LINE</a>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="contact-form-wrapper">
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <label for="name">姓名 *</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" name="name" placeholder="您的姓名 *" required>
                         </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">聯絡電話 *</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">電子郵件 *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-
                         <div class="form-group">
-                            <label for="location">所在地區 *</label>
-                            <select id="location" name="location" required>
-                                <option value="">請選擇</option>
-                                <option value="hk">香港</option>
-                                <option value="tw-taipei">台灣 - 台北</option>
-                                <option value="tw-taichung">台灣 - 台中</option>
-                                <option value="tw-kaohsiung">台灣 - 高雄</option>
+                            <input type="email" name="email" placeholder="電子郵件 *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="聯絡電話 *" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value="">請選擇服務類型 *</option>
+                                <option value="personal">個人靜修室</option>
+                                <option value="corporate">企業wellness center</option>
+                                <option value="home">家庭療癒空間</option>
+                                <option value="healing">專業療癒中心</option>
+                                <option value="hotel">精品旅館套房</option>
                                 <option value="other">其他</option>
                             </select>
                         </div>
-
                         <div class="form-group">
-                            <label for="service">感興趣的服務 *</label>
-                            <select id="service" name="service" required>
-                                <option value="">請選擇</option>
-                                <option value="home">個人家居淨修室</option>
-                                <option value="office">企業靜心空間</option>
-                                <option value="center">療癒中心規劃</option>
-                                <option value="product">量子淨化儀</option>
-                                <option value="consultation">諮詢服務</option>
-                            </select>
+                            <textarea name="message" rows="5" placeholder="請簡述您的需求與期望..."></textarea>
                         </div>
-
-                        <div class="form-group">
-                            <label for="budget">預算範圍</label>
-                            <select id="budget" name="budget">
-                                <option value="">請選擇（選填）</option>
-                                <option value="under-30">NT$300,000 以下</option>
-                                <option value="30-50">NT$300,000 - 500,000</option>
-                                <option value="50-100">NT$500,000 - 1,000,000</option>
-                                <option value="over-100">NT$1,000,000 以上</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">需求說明 *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="請簡述您的空間現況與需求..."></textarea>
-                        </div>
-
-                        <div class="form-group checkbox-group">
-                            <label>
-                                <input type="checkbox" name="privacy" required>
-                                我已閱讀並同意<a href="#">隱私權政策</a>
-                            </label>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-large">立即預約免費諮詢</button>
+                        <button type="submit" class="btn btn-primary">提交諮詢</button>
                     </form>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>常見問題</h2>
-                <p class="section-subtitle">解答您的疑惑</p>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>什麼是科學化靈性空間設計？</h4>
-                        <span class="faq-toggle">+</span>
+                <div class="contact-info">
+                    <h3>聯絡資訊</h3>
+                    <p>📧 Email: info@healing-space-design.com</p>
+                    <p>📍 地址: 台北市信義區</p>
+                    <div class="contact-hours">
+                        <h4>服務時間</h4>
+                        <p>週一至週五: 10:00 - 19:00</p>
+                        <p>週六: 10:00 - 17:00</p>
+                        <p>週日及國定假日: 預約制</p>
                     </div>
-                    <div class="faq-answer">
-                        <p>科學化靈性空間設計是結合傳統風水智慧、現代物理學概念（量子）與室內設計的跨領域服務。我們使用專業儀器檢測空間能量場，進行數據化分析，並根據結果制定精準的設計方案，超越僅注重美學或硬指標的傳統設計。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>量子風水和傳統風水有什麼不同？</h4>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>量子風水是將傳統風水中的「氣場」概念，透過現代科學儀器進行量化測量。我們檢測電磁波、負離子濃度、聲場、光譜等數據，將玄學轉化為可驗證的科學數據，提供更精準的空間優化方案。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>小坪數空間也能打造淨修室嗎？</h4>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>當然可以！我們專精於小坪數空間的優化設計，特別針對香港與台灣的住宅環境。透過多功能彈性設計、智慧收納與空間規劃，即使是10-15坪的空間也能打造出功能完整的淨修室。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>設計流程需要多長時間？</h4>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>整體流程約需2-4個月，包括：1週能量場檢測與分析、2週設計方案規劃、6-10週施工期。實際時間會依據專案規模與複雜度調整。我們會在初次諮詢時提供詳細的時程規劃。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>量子淨化儀需要特殊維護嗎？</h4>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>量子淨化儀的維護非常簡單。每月清潔濾網一次，每季更換濾芯即可。我們提供完整的使用教學與售後服務，並有定期的保養提醒服務，確保設備始終處於最佳狀態。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>是否提供WELL認證協助？</h4>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>是的，我們提供國際WELL建築認證的完整協助服務，從初期規劃、設計執行到最終認證申請，我們的專業團隊將全程陪伴，確保您的空間達到國際健康建築標準。</p>
+                    <div class="social-links">
+                        <h4>關注我們</h4>
+                        <a href="#" class="social-icon">Facebook</a>
+                        <a href="#" class="social-icon">Instagram</a>
+                        <a href="#" class="social-icon">LINE</a>
                     </div>
                 </div>
             </div>
@@ -787,49 +490,28 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>療癒空間設計指南</h3>
-                    <p>Scientific Spiritual Space Design</p>
-                    <p class="footer-tagline">引領空間設計進入療癒功能時代</p>
+                    <h3>科學化靈性空間設計</h3>
+                    <p>打造療癒的能量場<br>結合傳統智慧與現代科學的專業團隊</p>
                 </div>
-
                 <div class="footer-section">
-                    <h4>服務項目</h4>
+                    <h4>快速連結</h4>
                     <ul>
-                        <li><a href="services.html">個人家居淨修室</a></li>
-                        <li><a href="services.html">企業靜心空間</a></li>
-                        <li><a href="services.html">療癒中心規劃</a></li>
-                        <li><a href="products.html">量子淨化儀</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>關於我們</h4>
-                    <ul>
-                        <li><a href="about.html">公司介紹</a></li>
+                        <li><a href="about.html">關於我們</a></li>
                         <li><a href="philosophy.html">設計理念</a></li>
+                        <li><a href="services.html">服務項目</a></li>
+                        <li><a href="products.html">產品介紹</a></li>
                         <li><a href="cases.html">成功案例</a></li>
                         <li><a href="blog.html">部落格</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-section">
                     <h4>聯絡資訊</h4>
-                    <ul>
-                        <li>📞 +852 1234-5678 (HK)</li>
-                        <li>📞 +886 2-1234-5678 (TW)</li>
-                        <li>📧 info@healing-space-design.com</li>
-                        <li>⏰ 週一至週五 10:00-18:00</li>
-                    </ul>
+                    <p>📧 Email: info@healing-space-design.com<br>
+                    📍 地址: 台北市信義區</p>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2025 療癒空間設計指南. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">隱私權政策</a>
-                    <a href="#">服務條款</a>
-                    <a href="#">網站地圖</a>
-                </div>
+                <p>&copy; 2024-2025 科學化靈性空間設計. All rights reserved.</p>
             </div>
         </div>
     </footer>
