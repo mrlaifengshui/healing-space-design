@@ -18,12 +18,12 @@
             --healing-accent: #9BB8B3;
             --healing-soft: #F5F3ED;
             --healing-warm: #E8DCC4;
+            --healing-blue: #5B9BD5;
         }
         
         .hero {
-            background-image: url('https://www.genspark.ai/api/files/s/fp3jg7OC');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, rgba(91, 155, 213, 0.85) 0%, rgba(139, 157, 131, 0.75) 100%), 
+                        url('https://www.genspark.ai/api/files/s/9Q0KZLjM') center/cover no-repeat;
             min-height: 90vh;
             position: relative;
             display: flex;
@@ -37,7 +37,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0);
+            background: rgba(0, 0, 0, 0.2);
         }
         
         .hero-content {
@@ -49,13 +49,33 @@
             margin: 0 auto;
         }
         
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 2rem;
+            color: var(--healing-blue);
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+        
         .hero-description {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             line-height: 2;
-            color: #5a5a5a;
+            color: white;
             margin: 2rem auto 2.5rem;
-            max-width: 800px;
+            max-width: 850px;
             font-weight: 400;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
         }
         
         .hero-buttons {
@@ -74,7 +94,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-block;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
         .btn-primary {
@@ -84,13 +104,13 @@
         
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(139, 157, 131, 0.3);
+            box-shadow: 0 8px 25px rgba(139, 157, 131, 0.4);
         }
         
         .btn-secondary {
             background: white;
             color: var(--healing-primary);
-            border: 2px solid var(--healing-primary);
+            border: 2px solid white;
         }
         
         .btn-secondary:hover {
@@ -127,16 +147,39 @@
         }
         
         .problem-icon {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, var(--healing-soft) 0%, var(--healing-warm) 100%);
+            background: linear-gradient(135deg, #8B9D83 0%, #9BB8B3 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
-            box-shadow: 0 4px 15px rgba(139, 157, 131, 0.2);
+            font-size: 3rem;
+            box-shadow: 0 8px 25px rgba(139, 157, 131, 0.3);
+            position: relative;
+        }
+        
+        .problem-icon::before {
+            content: '';
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            border-radius: 50%;
+            border: 3px solid var(--healing-accent);
+            opacity: 0.3;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.1;
+            }
         }
         
         .problem-card h3 {
@@ -199,10 +242,9 @@
         }
         
         .philosophy-card p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #555;
             line-height: 1.8;
-            margin-bottom: 1rem;
         }
         
         .application-section {
@@ -272,16 +314,6 @@
             padding: 0.5rem 0;
             color: #555;
             line-height: 1.6;
-        }
-        
-        .application-content blockquote {
-            margin: 1.5rem 0;
-            padding: 1rem 1.5rem;
-            background: var(--healing-soft);
-            border-left: 4px solid var(--healing-accent);
-            border-radius: 10px;
-            font-style: italic;
-            color: #555;
         }
         
         .contact-section {
@@ -368,6 +400,18 @@
         }
         
         @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
             .hero-buttons {
                 flex-direction: column;
             }
@@ -398,9 +442,8 @@
                 <a href="products.html" class="nav-link">產品介紹</a>
                 <a href="cases.html" class="nav-link">成功案例</a>
                 <a href="blog.html" class="nav-link">部落格</a>
-                <a href="#contact" class="nav-link cta-button">預約諮詢</a>
             </div>
-            <div class="nav-toggle" id="navToggle">
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -412,6 +455,8 @@
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
+            <h1 class="hero-title">科學化靈性空間設計</h1>
+            <h2 class="hero-subtitle">打造療癒的能量場</h2>
             <p class="hero-description">
                 結合傳統風水智慧與現代健康標準，透過科學化的能量場分析，為您的空間帶來深度療癒與心靈成長。<br>
                 無論是企業辦公室、療癒中心還是私密家居，我們都能打造出真正實現身心平衡的靜修空間。
@@ -466,19 +511,19 @@
             <div class="philosophy-card">
                 <h3>🌿 自然空間設計</h3>
                 <h4>Natural Space Design</h4>
-                <p>運用自然元素、光線和空氣流動，營造如同置身大自然的療癒環境。透過生物親和設計、自然採光優化、植栽配置與自然材質應用，讓空間與自然和諧共存，降低壓力、提升專注力與創造力。</p>
+                <p>運用自然元素、光線和空氣流動，營造如同置身大自然的療癒環境。</p>
             </div>
 
             <div class="philosophy-card">
                 <h3>🕉️ 靈修空間設計</h3>
                 <h4>Spiritual Practice Space Design</h4>
-                <p>通過專業能量場檢測與分析，結合傳統風水智慧與現代空間科學，優化空間的靈性頻率。運用神聖幾何、水晶能量陣列等方法，創造支持冥想、靜修與內在探索的和諧空間，幫助提升意識層次。</p>
+                <p>通過能量場分析與優化，提升空間的靈性頻率，支持冥想與靜修。</p>
             </div>
 
             <div class="philosophy-card">
                 <h3>🎨 療癒空間設計</h3>
                 <h4>Healing Space Design</h4>
-                <p>從視覺、聽覺、嗅覺、觸覺等五感體驗出發，運用色彩心理學、聲學環境優化、芳香療法與天然材質，為身心帶來全方位的療癒感受。每個設計細節都經過精心規劃，創造真正滋養身心的空間體驗。</p>
+                <p>優化視覺、聽覺、嗅覺、觸覺體驗，為身心帶來全方位的療癒感受。</p>
             </div>
         </div>
     </section>
@@ -493,7 +538,7 @@
             <div class="application-grid">
                 <div class="application-card">
                     <div class="application-image">
-                        <img src="https://images.unsplash.com/photo-1545224144-b38cd309ef69?q=80&w=800" alt="個人靜修室">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800" alt="個人靜修室">
                     </div>
                     <div class="application-content">
                         <h3>🧘 個人靜修室</h3>
@@ -509,7 +554,7 @@
 
                 <div class="application-card">
                     <div class="application-image">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800" alt="企業wellness center">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800" alt="企業wellness center">
                     </div>
                     <div class="application-content">
                         <h3>🏢 企業 Wellness Center</h3>
@@ -525,7 +570,7 @@
 
                 <div class="application-card">
                     <div class="application-image">
-                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?q=80&w=800" alt="家庭療癒空間">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=800" alt="家庭療癒空間">
                     </div>
                     <div class="application-content">
                         <h3>🏠 家庭療癒空間</h3>
@@ -541,7 +586,7 @@
 
                 <div class="application-card">
                     <div class="application-image">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800" alt="療癒中心">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800" alt="療癒中心">
                     </div>
                     <div class="application-content">
                         <h3>💆 專業療癒中心</h3>
@@ -557,7 +602,7 @@
 
                 <div class="application-card">
                     <div class="application-image">
-                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800" alt="精品旅館療癒套房">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800" alt="精品旅館療癒套房">
                     </div>
                     <div class="application-content">
                         <h3>🏨 精品旅館療癒套房</h3>
@@ -632,10 +677,6 @@
                         <li><a href="cases.html">成功案例</a></li>
                         <li><a href="blog.html">部落格</a></li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>聯絡我們</h4>
-                    <p>📧 Email: info@healing-space-design.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
