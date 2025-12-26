@@ -21,10 +21,10 @@
         }
         
         .hero {
-            background-image: url('https://www.genspark.ai/api/files/s/sUPAk86C?cache_control=3600');
+            background-image: url('https://www.genspark.ai/api/files/s/fp3jg7OC');
             background-size: cover;
             background-position: center;
-            min-height: 85vh;
+            min-height: 90vh;
             position: relative;
             display: flex;
             align-items: center;
@@ -37,45 +37,78 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.15);
+            background: rgba(0, 0, 0, 0);
         }
         
         .hero-content {
             position: relative;
             z-index: 2;
             text-align: center;
-            color: #fff;
             padding: 2rem;
-        }
-        
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-            letter-spacing: 0.1em;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-        }
-        
-        .hero-subtitle {
-            font-size: 2rem;
-            color: var(--healing-accent);
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
         .hero-description {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             line-height: 2;
-            max-width: 900px;
-            margin: 0 auto 2.5rem;
-            opacity: 0.95;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+            color: #5a5a5a;
+            margin: 2rem auto 2.5rem;
+            max-width: 800px;
+            font-weight: 400;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--healing-primary) 0%, var(--healing-accent) 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(139, 157, 131, 0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--healing-primary);
+            border: 2px solid var(--healing-primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--healing-primary);
+            color: white;
+            transform: translateY(-3px);
         }
         
         .problem-section {
             background: linear-gradient(135deg, var(--healing-soft) 0%, #fff 100%);
             padding: 5rem 0;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
         }
         
         .problem-card {
@@ -94,9 +127,42 @@
         }
         
         .problem-icon {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--healing-soft) 0%, var(--healing-warm) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 4px 15px rgba(139, 157, 131, 0.2);
+        }
+        
+        .problem-card h3 {
+            color: var(--healing-primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .problem-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .solution-highlight {
+            margin-top: 3rem;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(139, 157, 131, 0.15);
+            border-left: 5px solid var(--healing-accent);
+        }
+        
+        .solution-highlight h3 {
+            color: var(--healing-primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
         
         .philosophy-section {
@@ -106,9 +172,9 @@
         
         .philosophy-card {
             background: linear-gradient(135deg, var(--healing-soft) 0%, white 100%);
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 25px;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             border-left: 5px solid var(--healing-primary);
             box-shadow: 0 10px 35px rgba(0,0,0,0.08);
             transition: all 0.4s ease;
@@ -119,9 +185,36 @@
             box-shadow: 0 15px 45px rgba(0,0,0,0.12);
         }
         
+        .philosophy-card h3 {
+            font-size: 1.8rem;
+            color: var(--healing-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .philosophy-card h4 {
+            font-size: 1.1rem;
+            color: var(--healing-accent);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        
+        .philosophy-card p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
         .application-section {
             background: linear-gradient(to bottom, #fff 0%, var(--healing-soft) 100%);
             padding: 6rem 0;
+        }
+        
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
         }
         
         .application-card {
@@ -133,12 +226,12 @@
         }
         
         .application-card:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
             box-shadow: 0 20px 60px rgba(0,0,0,0.15);
         }
         
         .application-image {
-            height: 250px;
+            height: 280px;
             overflow: hidden;
         }
         
@@ -150,7 +243,45 @@
         }
         
         .application-card:hover .application-image img {
-            transform: scale(1.15);
+            transform: scale(1.1);
+        }
+        
+        .application-content {
+            padding: 2rem;
+        }
+        
+        .application-content h3 {
+            color: var(--healing-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .application-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .application-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        .application-content ul li {
+            padding: 0.5rem 0;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .application-content blockquote {
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            background: var(--healing-soft);
+            border-left: 4px solid var(--healing-accent);
+            border-radius: 10px;
+            font-style: italic;
+            color: #555;
         }
         
         .contact-section {
@@ -159,28 +290,94 @@
             color: white;
         }
         
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
         .contact-form input,
-        .contact-form textarea {
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
             background: rgba(255,255,255,0.9);
             border: 2px solid transparent;
             border-radius: 12px;
             padding: 1rem;
             transition: all 0.3s ease;
+            font-size: 1rem;
         }
         
         .contact-form input:focus,
-        .contact-form textarea:focus {
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
             background: white;
             border-color: var(--healing-warm);
             box-shadow: 0 0 20px rgba(255,255,255,0.3);
         }
         
+        .contact-form button {
+            width: 100%;
+            padding: 1.2rem;
+            background: white;
+            color: var(--healing-primary);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--healing-primary);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+        }
+        
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.2rem;
+            .hero-buttons {
+                flex-direction: column;
             }
-            .hero-subtitle {
-                font-size: 1.5rem;
+            
+            .application-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .problem-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -215,22 +412,14 @@
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <div class="hero-text">
-                <h2 class="hero-title">科學化靈性空間設計</h2>
-                <h3 class="hero-subtitle">打造療癒的能量場</h3>
-                <p class="hero-description">
-                    結合傳統風水智慧與現代健康標準，透過科學化的能量場分析，為您的空間帶來深度療癒與心靈成長。<br>
-                    無論是企業辦公室、療癒中心還是私密家居，我們都能打造出真正實現身心平衡的靜修空間。
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">免費空間能量檢測</a>
-                    <a href="about.html" class="btn btn-secondary">了解更多</a>
-                </div>
+            <p class="hero-description">
+                結合傳統風水智慧與現代健康標準，透過科學化的能量場分析，為您的空間帶來深度療癒與心靈成長。<br>
+                無論是企業辦公室、療癒中心還是私密家居，我們都能打造出真正實現身心平衡的靜修空間。
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">免費空間能量檢測</a>
+                <a href="about.html" class="btn btn-secondary">了解更多</a>
             </div>
-        </div>
-        <div class="hero-scroll">
-            <span>向下探索</span>
-            <div class="scroll-indicator"></div>
         </div>
     </section>
 
@@ -243,17 +432,17 @@
             </div>
             <div class="problem-grid">
                 <div class="problem-card">
-                    <div class="problem-icon">😰</div>
+                    <div class="problem-icon">🏠</div>
                     <h3>無法真正放鬆的空間</h3>
                     <p>每天拖著疲憊的身軀回家，卻發現空間無法讓您真正卸下心防。躺在床上翻來覆去，腦中依然盤旋著工作的壓力，身體緊繃無法放鬆。您渴望一個能讓心靈真正安靜下來的角落...</p>
                 </div>
                 <div class="problem-card">
-                    <div class="problem-icon">😔</div>
+                    <div class="problem-icon">🌙</div>
                     <h3>深夜輾轉難眠的煎熬</h3>
                     <p>夜深人靜，您躺在床上盯著天花板，思緒像脫韁野馬無法停止。睡眠品質越來越差，白天精神恍惚，情緒起伏不定。明明很累，卻總是睡不著。您需要的不只是一張舒適的床，而是一個能真正安撫心靈的療癒空間...</p>
                 </div>
                 <div class="problem-card">
-                    <div class="problem-icon">🌪️</div>
+                    <div class="problem-icon">⚡</div>
                     <h3>說不出的壓抑與不安</h3>
                     <p>走進某些空間就莫名感到沉重、煩躁，待久了甚至頭痛、胸悶。家人之間爭執增多，工作效率下降，但找不到原因。您隱約感覺空間的能量不對勁，卻不知道如何改善。傳統裝潢只能改變外觀，卻無法觸及更深層的能量問題...</p>
                 </div>
@@ -270,44 +459,26 @@
     <section id="philosophy" class="philosophy-section">
         <div class="container">
             <div class="section-header">
-                <h2>身心靈空間設計</h2>
+                <h2>整合身心靈空間設計</h2>
                 <p class="section-subtitle">三大核心設計理念，打造全方位療癒體驗</p>
             </div>
             
             <div class="philosophy-card">
                 <h3>🌿 自然空間設計</h3>
                 <h4>Natural Space Design</h4>
-                <p>運用自然元素、光線和空氣流動，營造如同置身大自然的療癒環境。</p>
-                <ul>
-                    <li><strong>自然採光優化：</strong>最大化自然光線的引入，配合智能調光系統，模擬一天中光線的自然變化，調節生理時鐘，提升睡眠品質</li>
-                    <li><strong>生物親和元素：</strong>精心挑選室內植物、天然木材、石材等自然材質，創造與大自然的視覺與觸覺連結，降低壓力激素</li>
-                    <li><strong>空氣流動設計：</strong>優化通風系統，確保新鮮空氣循環，搭配負離子釋放技術，營造森林般的清新空氣環境</li>
-                    <li><strong>自然音景整合：</strong>引入流水聲、鳥鳴聲等自然白噪音，屏蔽都市噪音干擾，創造寧靜的聽覺體驗</li>
-                </ul>
+                <p>運用自然元素、光線和空氣流動，營造如同置身大自然的療癒環境。透過生物親和設計、自然採光優化、植栽配置與自然材質應用，讓空間與自然和諧共存，降低壓力、提升專注力與創造力。</p>
             </div>
 
             <div class="philosophy-card">
                 <h3>🕉️ 靈修空間設計</h3>
                 <h4>Spiritual Practice Space Design</h4>
-                <p>通過能量場分析與優化，提升空間的靈性頻率，支持冥想與靜修。</p>
-                <ul>
-                    <li><strong>能量場檢測與調諧：</strong>使用專業儀器測量空間的電磁場、地磁場分佈，根據傳統風水學與現代能量科學，找出最佳冥想方位</li>
-                    <li><strong>量子風水整合：</strong>結合八宅法、玄空飛星等傳統智慧，搭配量子物理學原理，優化空間能量流動，創造和諧共振場域</li>
-                    <li><strong>水晶能量陣列：</strong>依據五行理論與空間特性，設置特定水晶陣列，增強空間的靈性頻率，輔助深度冥想與內觀</li>
-                    <li><strong>神聖幾何應用：</strong>運用黃金比例、曼陀羅等神聖幾何圖形，在空間布局與裝飾中創造和諧共鳴，提升意識層次</li>
-                </ul>
+                <p>通過專業能量場檢測與分析，結合傳統風水智慧與現代空間科學，優化空間的靈性頻率。運用神聖幾何、水晶能量陣列等方法，創造支持冥想、靜修與內在探索的和諧空間，幫助提升意識層次。</p>
             </div>
 
             <div class="philosophy-card">
                 <h3>🎨 療癒空間設計</h3>
                 <h4>Healing Space Design</h4>
-                <p>優化視覺、聽覺、嗅覺、觸覺體驗，為身心帶來全方位的療癒感受。</p>
-                <ul>
-                    <li><strong>色彩心理學應用：</strong>依據色彩對情緒與生理的影響，精心調配大地色系(米白、淺灰、木質色)，營造平靜安心的視覺環境</li>
-                    <li><strong>聲學環境優化：</strong>專業隔音設計將背景噪音控制在35分貝以下，搭配432Hz療癒音樂系統，創造最佳聲學體驗</li>
-                    <li><strong>芳香療法整合：</strong>智能擴香系統釋放天然精油(薰衣草、乳香、檀香)，透過嗅覺神經直接影響情緒中樞，促進深度放鬆</li>
-                    <li><strong>觸覺體驗設計：</strong>選用天然棉麻織品、溫潤木質、柔軟地毯等材質，搭配溫度濕度智能調節，創造舒適的觸覺感受</li>
-                </ul>
+                <p>從視覺、聽覺、嗅覺、觸覺等五感體驗出發，運用色彩心理學、聲學環境優化、芳香療法與天然材質，為身心帶來全方位的療癒感受。每個設計細節都經過精心規劃，創造真正滋養身心的空間體驗。</p>
             </div>
         </div>
     </section>
@@ -322,43 +493,33 @@
             <div class="application-grid">
                 <div class="application-card">
                     <div class="application-image">
-                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=800" alt="個人靜修室">
+                        <img src="https://images.unsplash.com/photo-1545224144-b38cd309ef69?q=80&w=800" alt="個人靜修室">
                     </div>
                     <div class="application-content">
                         <h3>🧘 個人靜修室</h3>
                         <p><strong>適用對象：</strong>追求身心靈成長的個人、冥想練習者、瑜伽愛好者</p>
-                        <p><strong>空間特色：</strong>10-15坪私密空間，量子能量場調諧，自然採光優化，靜謐聲學環境</p>
                         <p><strong>實際效果：</strong></p>
                         <ul>
                             <li>✓ 睡眠品質改善 85%，深度睡眠時間延長 40%</li>
                             <li>✓ 冥想進入深度狀態的時間縮短 50%</li>
                             <li>✓ 焦慮指數下降 70%，情緒穩定度提升</li>
-                            <li>✓ 創造力與直覺力顯著增強</li>
                         </ul>
-                        <blockquote>
-                            "這個空間徹底改變了我的冥想練習。以前需要30分鐘才能靜下心，現在5分鐘就能進入深度冥想狀態。睡眠品質也大幅改善，每天早上醒來都精力充沛。" <br>- Sarah, 企業高管
-                        </blockquote>
                     </div>
                 </div>
 
                 <div class="application-card">
                     <div class="application-image">
-                        <img src="https://images.unsplash.com/photo-1545224144-b38cd309ef69?q=80&w=800" alt="企業wellness center">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800" alt="企業wellness center">
                     </div>
                     <div class="application-content">
                         <h3>🏢 企業 Wellness Center</h3>
                         <p><strong>適用對象：</strong>重視員工福祉的企業、科技公司、金融機構</p>
-                        <p><strong>空間特色：</strong>50-200坪綜合空間，包含冥想室、瑜伽教室、能量療癒區，符合WELL建築標準</p>
                         <p><strong>實際效果：</strong></p>
                         <ul>
                             <li>✓ 員工壓力指數下降 45%，離職率降低 30%</li>
                             <li>✓ 工作效率提升 25%，創新提案增加 35%</li>
-                            <li>✓ 病假率下降 40%，醫療支出減少</li>
-                            <li>✓ 員工滿意度達 4.7/5，雇主品牌形象提升</li>
+                            <li>✓ 病假率下降 40%，員工滿意度達 4.7/5</li>
                         </ul>
-                        <blockquote>
-                            "wellness center 成為公司最受歡迎的福利。員工在壓力大時可以隨時去冥想充電，整體工作氛圍變得更和諧。投資報酬率超乎預期！" <br>- David Chen, 科技公司 CEO
-                        </blockquote>
                     </div>
                 </div>
 
@@ -369,17 +530,12 @@
                     <div class="application-content">
                         <h3>🏠 家庭療癒空間</h3>
                         <p><strong>適用對象：</strong>重視家庭和諧的家庭、多代同堂家庭、有學齡兒童的家庭</p>
-                        <p><strong>空間特色：</strong>20-40坪居家空間，全屋能量優化，客廳、臥室、書房的系統性設計</p>
                         <p><strong>實際效果：</strong></p>
                         <ul>
-                            <li>✓ 家庭成員關係和諧度提升 60%，爭執頻率減少 55%</li>
+                            <li>✓ 家庭成員關係和諧度提升 60%</li>
                             <li>✓ 兒童專注力提高 40%，學業表現進步</li>
-                            <li>✓ 家人睡眠品質整體改善，晨起精神狀態佳</li>
-                            <li>✓ 家中氛圍溫馨平和，訪客都能感受到正向能量</li>
+                            <li>✓ 家人睡眠品質整體改善</li>
                         </ul>
-                        <blockquote>
-                            "改造後家裡的氛圍完全不同了！以前青春期的孩子總是緊張易怒，現在變得平靜許多。連來訪的親友都說我們家的氣氛特別舒服，讓人不想離開。" <br>- Linda Wang, 三個孩子的母親
-                        </blockquote>
                     </div>
                 </div>
 
@@ -390,38 +546,28 @@
                     <div class="application-content">
                         <h3>💆 專業療癒中心</h3>
                         <p><strong>適用對象：</strong>瑜伽館、冥想中心、身心靈工作室、SPA會館</p>
-                        <p><strong>空間特色：</strong>30-100坪商業空間，專業級能量場設計，品牌形象整合，營運效率優化</p>
                         <p><strong>實際效果：</strong></p>
                         <ul>
-                            <li>✓ 療癒效果提升 55%，客戶更容易進入深度放鬆狀態</li>
-                            <li>✓ 客戶滿意度達 4.8/5，正面評價增加 45%</li>
+                            <li>✓ 療癒效果提升 55%，客戶滿意度達 4.8/5</li>
                             <li>✓ 回訪率提升 50%，會員續約率達 75%</li>
-                            <li>✓ 口碑推薦新客增加 60%，營業額成長顯著</li>
+                            <li>✓ 口碑推薦新客增加 60%</li>
                         </ul>
-                        <blockquote>
-                            "空間改造後，學員都說在這裡練習瑜伽的效果比其他地方好太多。很多人上完課都不想離開，就坐在大廳享受這個空間的能量。會員數三個月內成長了一倍！" <br>- Jessica Liu, 瑜伽館創辦人
-                        </blockquote>
                     </div>
                 </div>
 
                 <div class="application-card">
                     <div class="application-image">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800" alt="精品旅館療癒套房">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800" alt="精品旅館療癒套房">
                     </div>
                     <div class="application-content">
                         <h3>🏨 精品旅館療癒套房</h3>
                         <p><strong>適用對象：</strong>精品旅館、度假村、高端民宿、wellness resort</p>
-                        <p><strong>空間特色：</strong>20-50坪奢華套房，五感沉浸式設計，量子淨化儀旗艦款，私密花園景觀</p>
                         <p><strong>實際效果：</strong></p>
                         <ul>
                             <li>✓ 入住率達 95% 以上，成為旅館招牌產品</li>
-                            <li>✓ 客戶願意支付 30-50% 溢價入住療癒套房</li>
-                            <li>✓ 客戶評分 4.9/5，獲得大量五星好評</li>
-                            <li>✓ 回訪率達 65%，成為忠實客戶首選</li>
+                            <li>✓ 客戶願意支付 30-50% 溢價</li>
+                            <li>✓ 客戶評分 4.9/5，回訪率達 65%</li>
                         </ul>
-                        <blockquote>
-                            "這是我住過最特別的旅館房間。一進門就感覺到不同的能量，那晚睡得特別沉，醒來整個人煥然一新。現在只要來台北，我一定指定住這個療癒套房。" <br>- Mark Chen, 旅館常客
-                        </blockquote>
                     </div>
                 </div>
             </div>
@@ -464,23 +610,6 @@
                         <button type="submit" class="btn btn-primary">提交諮詢</button>
                     </form>
                 </div>
-                <div class="contact-info">
-                    <h3>聯絡資訊</h3>
-                    <p>📧 Email: info@healing-space-design.com</p>
-                    <p>📍 地址: 台北市信義區</p>
-                    <div class="contact-hours">
-                        <h4>服務時間</h4>
-                        <p>週一至週五: 10:00 - 19:00</p>
-                        <p>週六: 10:00 - 17:00</p>
-                        <p>週日及國定假日: 預約制</p>
-                    </div>
-                    <div class="social-links">
-                        <h4>關注我們</h4>
-                        <a href="#" class="social-icon">Facebook</a>
-                        <a href="#" class="social-icon">Instagram</a>
-                        <a href="#" class="social-icon">LINE</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -505,9 +634,8 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>聯絡資訊</h4>
-                    <p>📧 Email: info@healing-space-design.com<br>
-                    📍 地址: 台北市信義區</p>
+                    <h4>聯絡我們</h4>
+                    <p>📧 Email: info@healing-space-design.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
