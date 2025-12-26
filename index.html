@@ -50,9 +50,14 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            padding: 3rem 2rem;
-            max-width: 1000px;
+            padding: 0;
+            max-width: 100%;
             margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 4rem;
         }
         
         .hero-title {
@@ -64,15 +69,7 @@
         }
         
         .hero-description {
-            font-size: 1.25rem;
-            line-height: 2.2;
-            color: #3D4A3C;
-            margin: 2.5rem auto;
-            max-width: 850px;
-            font-weight: 400;
-            padding: 2rem 2.5rem;
-            background: transparent;
-            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+            display: none;
         }
         
         .hero-buttons {
@@ -81,7 +78,6 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            margin-top: 3rem;
         }
         
         .btn {
@@ -555,10 +551,12 @@
         }
         
         @media (max-width: 768px) {
-            .hero-description {
-                font-size: 1rem;
-                padding: 1.2rem;
-                line-height: 1.8;
+            .hero {
+                min-height: 70vh;
+            }
+            
+            .hero-content {
+                padding-bottom: 2rem;
             }
             
             .hero-buttons {
