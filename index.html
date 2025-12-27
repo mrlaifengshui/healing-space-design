@@ -38,6 +38,7 @@
         
         .hero {
             background: url('images/hero-background.png') center/cover no-repeat;
+            background-attachment: fixed;
             min-height: 95vh;
             position: relative;
             display: flex;
@@ -80,15 +81,17 @@
         
         .hero-description {
             font-size: 1.2rem;
-            color: #3D4A3C;
-            line-height: 1.8;
+            color: #2C3A2B;
+            line-height: 2;
             max-width: 800px;
             margin: 0 auto 2.5rem auto;
-            padding: 1.5rem 2rem;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 0;
+            background: none;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.9);
+        }
+        
+        .hero-description .desc-line {
+            display: inline;
         }
         
         .hero-buttons {
@@ -590,9 +593,14 @@
             
             .hero-description {
                 font-size: 1rem;
-                padding: 1.2rem 1.5rem;
+                padding: 0;
                 margin-bottom: 2rem;
-                line-height: 1.6;
+                line-height: 1.8;
+                background: none;
+            }
+            
+            .hero-description .desc-line {
+                display: block;
             }
             
             .hero-buttons {
@@ -647,8 +655,11 @@
             <h1 class="hero-title">科學化靈性空間設計</h1>
             <h2 class="hero-subtitle">打造療癒的能量場</h2>
             <p class="hero-description">
-                結合傳統風水智慧與現代健康標準，透過科學化的能量場分析，為您的空間帶來深度療癒與心靈成長。<br>
-                無論是企業辦公室、療癒中心還是私密家居，我們都能打造出真正實現身心平衡的靜修空間。
+                <span class="desc-line">結合傳統風水智慧與現代健康標準，透過科學化的能量場分析，</span><br>
+                <span class="desc-line">為您的空間帶來深度療癒與心靈成長。</span><br>
+                <br>
+                <span class="desc-line">無論是企業辦公室、療癒中心還是私密家居，</span><br>
+                <span class="desc-line">我們都能打造出真正實現身心平衡的靜修空間。</span>
             </p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">免費空間能量檢測</a>
