@@ -82,16 +82,19 @@
         .hero-description {
             font-size: 1.2rem;
             color: #2C3A2B;
-            line-height: 2;
+            line-height: 2.2;
             max-width: 800px;
             margin: 0 auto 2.5rem auto;
             padding: 0;
             background: none;
-            text-shadow: 2px 2px 4px rgba(255,255,255,0.9);
         }
         
         .hero-description .desc-line {
             display: inline;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 0.1rem 0.3rem;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
         }
         
         .hero-buttons {
@@ -250,27 +253,28 @@
         }
         
         .solution-highlight {
-            margin-top: 4rem;
-            padding: 3rem;
-            background: linear-gradient(135deg, rgba(168, 192, 144, 0.08) 0%, rgba(184, 212, 206, 0.08) 100%);
-            border-radius: 25px;
-            box-shadow: 0 15px 50px rgba(168, 192, 144, 0.12);
-            border-left: 6px solid var(--healing-gold);
-            border-right: 6px solid var(--healing-teal);
+            margin-top: 3rem;
+            padding: 2.5rem 3rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #4DB8AC;
+            text-align: center;
         }
         
         .solution-highlight h3 {
-            color: var(--healing-gold);
-            margin-bottom: 1.5rem;
-            font-size: 1.6rem;
-            font-weight: 600;
+            color: #2C3A2B;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
         }
         
         .solution-highlight p {
-            color: var(--healing-teal);
-            line-height: 2.2;
-            font-size: 1.15rem;
-            font-weight: 500;
+            color: #3D4A3C;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            font-weight: 400;
+            display: none;
         }
         
         .solution-highlight strong {
@@ -547,10 +551,10 @@
         }
         
         .section-header h2 {
-            font-size: 2.8rem;
-            color: var(--healing-teal);
+            font-size: 2.5rem;
+            color: #2C3A2B;
             margin-bottom: 1.5rem;
-            font-weight: 600;
+            font-weight: 700;
             position: relative;
             display: inline-block;
         }
@@ -568,8 +572,8 @@
         
         .section-subtitle {
             font-size: 1.3rem;
-            color: #5A6455;
-            font-weight: 400;
+            color: #4DB8AC;
+            font-weight: 500;
         }
         
         @media (max-width: 768px) {
@@ -582,25 +586,29 @@
             }
             
             .hero-title {
-                font-size: 2rem;
-                margin-bottom: 1rem;
+                font-size: 1.6rem;
+                margin-bottom: 0.8rem;
             }
             
             .hero-subtitle {
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
+                font-size: 1.2rem;
+                margin-bottom: 1.2rem;
             }
             
             .hero-description {
-                font-size: 1rem;
+                font-size: 0.85rem;
                 padding: 0;
-                margin-bottom: 2rem;
-                line-height: 1.8;
+                margin-bottom: 1.8rem;
+                line-height: 2;
                 background: none;
             }
             
             .hero-description .desc-line {
                 display: block;
+                background: rgba(255, 255, 255, 0.85);
+                padding: 0.1rem 0.3rem;
+                box-decoration-break: clone;
+                -webkit-box-decoration-break: clone;
             }
             
             .hero-buttons {
@@ -619,7 +627,52 @@
             }
             
             .section-header h2 {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                font-size: 0.95rem;
+                padding: 1rem 2.5rem;
+            }
+            
+            .solution-highlight {
+                padding: 1.8rem 1.5rem;
+            }
+            
+            .solution-highlight h3 {
+                font-size: 1.2rem;
+            }
+            
+            body {
+                font-size: 0.95rem;
+            }
+            
+            .contact-section {
+                padding: 4rem 0;
+            }
+            
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+            
+            .contact-form input,
+            .contact-form textarea,
+            .contact-form select {
+                font-size: 0.95rem;
+                padding: 1rem;
+            }
+            
+            .contact-form button {
+                font-size: 1rem;
+                padding: 1.2rem;
+            }
+            
+            .form-group {
+                margin-bottom: 1.5rem;
             }
         }
     </style>
